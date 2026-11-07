@@ -34,6 +34,9 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
             WindowManager.shared.showHub()
         }
 
+        // Launching makes the app active; with no window to show, give focus straight back.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { WindowManager.shared.handFocusBackIfIdle() }
+
         // Cmd-Shift-Space opens search while DesktopDüzen is active.
         keyMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
             let flags = event.modifierFlags.intersection(.deviceIndependentFlagsMask)

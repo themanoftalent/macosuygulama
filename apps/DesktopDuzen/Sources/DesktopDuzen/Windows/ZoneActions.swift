@@ -16,6 +16,7 @@ public enum ZoneActions {
         input.stringValue = defaultValue
         alert.accessoryView = input
         alert.window.initialFirstResponder = input
+        defer { DispatchQueue.main.async { WindowManager.shared.handFocusBackIfIdle() } }
         guard alert.runModal() == .alertFirstButtonReturn else { return nil }
         let value = input.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
         return value.isEmpty ? defaultValue : value
@@ -28,6 +29,7 @@ public enum ZoneActions {
         alert.messageText = title
         alert.informativeText = message
         alert.runModal()
+        DispatchQueue.main.async { WindowManager.shared.handFocusBackIfIdle() }
     }
 
     private static func ensureCanAdd() -> Bool {
@@ -57,6 +59,7 @@ public enum ZoneActions {
         if panel.runModal() == .OK, let url = panel.url {
             state.createFolderZone(title: url.lastPathComponent, folderURL: url)
         }
+        DispatchQueue.main.async { WindowManager.shared.handFocusBackIfIdle() }
     }
 
     public static func createAppZone() {
@@ -75,6 +78,7 @@ public enum ZoneActions {
     /// Asks what to do with the zone's files. Default (Return) is the non-destructive choice.
     public static func confirmDelete(id: UUID) {
         guard let zone = state.zone(id: id) else { return }
+        defer { DispatchQueue.main.async { WindowManager.shared.handFocusBackIfIdle() } }
         NSApp.activate(ignoringOtherApps: true)
         let alert = NSAlert()
         alert.alertStyle = .warning
@@ -115,6 +119,7 @@ public enum ZoneActions {
     /// Explicit, previewed auto-sort. Offers to create missing target zones, then asks before moving.
     public static func runAutoSortInteractively() {
         guard state.isPro else { WindowManager.shared.showPaywall(); return }
+        defer { DispatchQueue.main.async { WindowManager.shared.handFocusBackIfIdle() } }
         let service = AutoSortService.shared
         var plan = service.makePlan(rules: state.autoSortRules, zones: state.zones)
 

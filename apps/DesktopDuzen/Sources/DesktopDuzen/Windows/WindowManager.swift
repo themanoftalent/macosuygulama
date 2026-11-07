@@ -44,9 +44,14 @@ public final class WindowManager: ObservableObject {
 
     public init() {}
 
+    /// The app that was frontmost before DesktopDüzen was activated (to hand focus back).
+    private var previousApp: NSRunningApplication?
+    private var outsideClickMonitor: Any?
+
     public func start() {
         guard !started else { return }
         started = true
+        observeFocusHandBack()
         observeAppState()
         observeSystem()
         syncAllZones()
@@ -102,6 +107,73 @@ public final class WindowManager: ObservableObject {
             panel.applySpacesBehavior(allSpaces: allSpaces)
             panel.setFrame(displayFrame(for: panel.frame), display: true)
             if !state.areAllZonesHidden { panel.orderFront(nil) }
+        }
+    }
+
+    // MARK: - Focus hand-back
+
+    /// DesktopDüzen activates itself to show the Hub, Settings, About or a dialog. When the last of
+    /// those windows closes it must give focus back; otherwise it stays the active app with no
+    /// windows and silently swallows the user's keyboard shortcuts.
+    private func observeFocusHandBack() {
+        let ws = NSWorkspace.shared.notificationCenter
+        ws.addObserver(forName: NSWorkspace.didActivateApplicationNotification, object: nil, queue: .main) { [weak self] note in
+            guard let app = note.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication else { return }
+            if app.processIdentifier != ProcessInfo.processInfo.processIdentifier {
+                self?.previousApp = app
+                self?.dropDesktopKeyFocusSoon()
+            }
+        }
+        // Zones and widgets are non-activating panels: a click into a sticky note or a rename field
+        // makes them key while another app stays frontmost. They then keep receiving every keystroke
+        // (Cmd-Shift-E and friends) even after the user clicks back into their editor, because that
+        // click does not change the active app. A click anywhere outside DesktopDüzen drops it.
+        outsideClickMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown, .otherMouseDown]) { [weak self] _ in
+            self?.dropDesktopKeyFocusSoon()
+        }
+        let nc = NotificationCenter.default
+        for name in [NSWindow.willCloseNotification, NSWindow.didMiniaturizeNotification] {
+            nc.addObserver(forName: name, object: nil, queue: .main) { [weak self] note in
+                guard let window = note.object as? NSWindow, !(window is DesktopPanel) else { return }
+                // Let the window finish closing, then check what is left.
+                DispatchQueue.main.async { self?.handFocusBackIfIdle(closing: window) }
+            }
+        }
+    }
+
+    /// Standard (non-desktop) windows the user can see.
+    private func visibleAppWindows(excluding closing: NSWindow? = nil) -> [NSWindow] {
+        NSApp.windows.filter { w in
+            w !== closing && w.isVisible && !w.isMiniaturized && !(w is DesktopPanel)
+                && w.level != DesktopPanel.desktopLevel && w.className != "NSStatusBarWindow"
+                && !w.className.contains("Menu") && w.frame.width > 40
+        }
+    }
+
+    private func dropDesktopKeyFocusSoon() {
+        // Let the click land first; if DesktopDüzen became active from it, normal rules apply.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in self?.dropDesktopKeyFocus() }
+    }
+
+    /// Removes keyboard focus from any zone or widget panel while another app is frontmost.
+    public func dropDesktopKeyFocus() {
+        guard !NSApp.isActive else { return }
+        for case let panel as DesktopPanel in NSApp.windows where panel.isKeyWindow {
+            panel.makeFirstResponder(nil)
+            // There is no public "resign key" call; re-ordering the panel hands key status back
+            // to the window server without moving or hiding it for longer than one frame.
+            let wasVisible = panel.isVisible
+            panel.orderOut(nil)
+            if wasVisible { panel.orderFrontRegardless() }
+        }
+    }
+
+    public func handFocusBackIfIdle(closing: NSWindow? = nil) {
+        guard NSApp.isActive, visibleAppWindows(excluding: closing).isEmpty, NSApp.modalWindow == nil else { return }
+        if let app = previousApp, !app.isTerminated {
+            app.activate(options: [])
+        } else {
+            NSApp.deactivate()
         }
     }
 
@@ -397,7 +469,7 @@ public final class WindowManager: ObservableObject {
         present(window)
     }
 
-    public func closeHub() { hubWindow?.orderOut(nil) }
+    public func closeHub() { hubWindow?.orderOut(nil); handFocusBackIfIdle() }
 
     /// Zone style settings in a solid, floating window (a popover attached to a desktop-level
     /// zone was translucent and could be covered by other zones).
@@ -474,7 +546,7 @@ public final class WindowManager: ObservableObject {
         present(window)
     }
 
-    public func closePaywall() { paywallWindow?.orderOut(nil) }
+    public func closePaywall() { paywallWindow?.orderOut(nil); handFocusBackIfIdle() }
 
     public func showOnboarding() {
         if let window = onboardingWindow { present(window); return }
@@ -484,7 +556,7 @@ public final class WindowManager: ObservableObject {
         present(window)
     }
 
-    public func closeOnboarding() { onboardingWindow?.orderOut(nil) }
+    public func closeOnboarding() { onboardingWindow?.orderOut(nil); handFocusBackIfIdle() }
 
     public func toggleGlobalSearch() {
         if let search = searchWindow, search.isVisible {
@@ -516,10 +588,11 @@ public final class WindowManager: ObservableObject {
         searchWindow?.makeKeyAndOrderFront(nil)
     }
 
-    public func closeSearch() { searchWindow?.orderOut(nil) }
+    public func closeSearch() { searchWindow?.orderOut(nil); handFocusBackIfIdle() }
 
     /// Releases every panel (used on termination so the state is flushed before windows vanish).
     public func tearDown() {
         for controller in controllers.values { controller.store.stop() }
+        if let monitor = outsideClickMonitor { NSEvent.removeMonitor(monitor); outsideClickMonitor = nil }
     }
 }
