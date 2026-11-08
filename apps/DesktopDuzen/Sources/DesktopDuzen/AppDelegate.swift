@@ -1,8 +1,20 @@
+import Combine
 import Cocoa
 import SwiftUI
 
 public class AppDelegate: NSObject, NSApplicationDelegate {
     private var keyMonitor: Any?
+    private var dockPolicyObserver: AnyCancellable?
+
+    static func applyDockIconPolicy(_ show: Bool) {
+        let policy: NSApplication.ActivationPolicy = show ? .regular : .accessory
+        guard NSApp.activationPolicy() != policy else { return }
+        NSApp.setActivationPolicy(policy)
+        // Switching to .accessory can leave a visible Hub or Settings window behind other apps.
+        if !show, NSApp.windows.contains(where: { $0.isVisible && !($0 is DesktopPanel) && $0.canBecomeKey && $0.frame.width > 40 }) {
+            NSApp.activate(ignoringOtherApps: true)
+        }
+    }
 
     public func applicationDidFinishLaunching(_ notification: Notification) {
         // Single instance: hand over to the copy that is already running.
@@ -15,10 +27,14 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        NSApp.setActivationPolicy(.regular)
         installMainMenu()
 
         let state = AppState.shared
+        // Info.plist marks the app as menu-bar only (LSUIElement), so no Dock icon flashes at launch.
+        AppDelegate.applyDockIconPolicy(state.settings.showDockIcon)
+        dockPolicyObserver = state.$settings.map(\.showDockIcon).removeDuplicates().dropFirst()
+            .receive(on: RunLoop.main)
+            .sink { AppDelegate.applyDockIconPolicy($0) }
         MenuBarManager.shared.setupMenuBar()
         WindowManager.shared.start()
 

@@ -153,7 +153,10 @@ public struct ZoneIconGridView: View {
                     .multilineTextAlignment(.center)
                     .focused($renameFocused)
                     .onSubmit { commitRename(file) }
-                    .onExitCommand { renamingPath = nil }
+                    .onExitCommand {
+                        renamingPath = nil
+                        WindowManager.shared.dropDesktopKeyFocus()
+                    }
                     .onAppear { renameFocused = true }
             } else {
                 Text(file.name)
@@ -193,6 +196,7 @@ public struct ZoneIconGridView: View {
         let trimmed = renameText.trimmingCharacters(in: .whitespacesAndNewlines)
         renamingPath = nil
         if !trimmed.isEmpty && trimmed != file.name { actions.rename(file, trimmed) }
+        WindowManager.shared.dropDesktopKeyFocus()
     }
 }
 

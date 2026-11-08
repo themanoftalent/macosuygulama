@@ -91,6 +91,8 @@ public struct SettingsView: View {
             caption("Registered as: \(LaunchAtLoginService.shared.currentMethod.rawValue)")
         }
         Toggle("Show the Hub window when DesktopDüzen starts", isOn: $appState.settings.showHubOnLaunch)
+        Toggle("Show DesktopDüzen in the Dock", isOn: $appState.settings.showDockIcon)
+        caption("Off: DesktopDüzen runs from the menu bar only and stays out of the Dock and Cmd-Tab. Zones keep working either way.")
 
         Divider()
         sectionTitle("Windows & Spaces")

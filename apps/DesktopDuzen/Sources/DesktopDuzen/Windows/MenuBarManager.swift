@@ -117,6 +117,11 @@ public class MenuBarManager: NSObject, NSMenuDelegate {
         hoverTitles.target = self
         hoverTitles.state = AppState.shared.settings.hideTitleBarsUntilHover ? .on : .off
         menu.addItem(hoverTitles)
+
+        let dockItem = NSMenuItem(title: "Show in Dock", action: #selector(toggleDockIcon), keyEquivalent: "")
+        dockItem.target = self
+        dockItem.state = AppState.shared.settings.showDockIcon ? .on : .off
+        menu.addItem(dockItem)
         
         let hideZonesTitle = AppState.shared.areAllZonesHidden ? "Show All Zones" : "Hide All Zones"
         let hideZonesItem = NSMenuItem(title: hideZonesTitle, action: #selector(toggleHideAllZones), keyEquivalent: "h")
@@ -201,6 +206,8 @@ public class MenuBarManager: NSObject, NSMenuDelegate {
     @objc private func addSticker() { ZoneActions.addSticker() }
     
     @objc private func toggleHoverTitles() { AppState.shared.settings.hideTitleBarsUntilHover.toggle() }
+
+    @objc private func toggleDockIcon() { AppState.shared.settings.showDockIcon.toggle() }
     
     @objc private func alignToGrid() { AppState.shared.alignAllZonesToGrid() }
     

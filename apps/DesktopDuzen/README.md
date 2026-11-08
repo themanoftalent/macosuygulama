@@ -15,6 +15,7 @@ The app is signed with a Developer ID but not yet notarized. On first launch, ri
 ## Features
 
 Zone types
+- Runs from the menu bar only by default, out of the Dock and Cmd-Tab. Settings > Show DesktopDüzen in the Dock brings the icon back.
 - File Zones keep their files in a real folder, `~/Desktop/Zones/<zone name>`, so everything stays visible and searchable in Finder.
 - Folder Zones show any existing folder (Downloads, a project, an external drive) without moving it. They follow the folder if it is renamed or moved.
 - App Zones are one-click launchers for applications.
@@ -54,7 +55,7 @@ Desktop behaviour
 ## Build
 
 ```bash
-swift test                      # 66 tests; they use temporary folders only and never touch your Desktop
+swift test                      # 67 tests; they use temporary folders only and never touch your Desktop
 ./scripts/build_app.sh          # builds and signs DesktopDuzen.app (Developer ID if available, else ad-hoc)
 ./scripts/create_dmg.sh         # packages and verifies DesktopDuzen-<version>.dmg
 swift scripts/make_icon.swift Resources && iconutil -c icns Resources/AppIcon.iconset -o Resources/AppIcon.icns

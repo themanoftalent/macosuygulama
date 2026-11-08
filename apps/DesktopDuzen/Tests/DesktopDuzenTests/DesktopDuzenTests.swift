@@ -837,10 +837,19 @@ final class KeyboardFocusTests: XCTestCase {
     func testZonesDoNotStealKeyboardFocusByDefault() throws {
         XCTAssertFalse(AppSettings().zonesTakeKeyboardFocus)
         XCTAssertFalse(try JSONDecoder().decode(AppSettings.self, from: Data("{}".utf8)).zonesTakeKeyboardFocus)
+        XCTAssertFalse(AppSettings().showDockIcon)
+        XCTAssertFalse(try JSONDecoder().decode(AppSettings.self, from: Data("{}".utf8)).showDockIcon)
+        var s = AppSettings(); s.showDockIcon = true
+        XCTAssertTrue(try JSONDecoder().decode(AppSettings.self, from: JSONEncoder().encode(s)).showDockIcon)
         let panel = ZonePanel(zone: ZoneModel(title: "Z"), contentRect: NSRect(x: 0, y: 0, width: 300, height: 200))
         XCTAssertTrue(panel.becomesKeyOnlyIfNeeded, "clicks must not make the zone key")
         panel.applyKeyboardFocusPolicy(takesFocusOnClick: true)
         XCTAssertFalse(panel.becomesKeyOnlyIfNeeded)
         XCTAssertTrue(panel.canBecomeKey, "text fields (rename) can still get focus")
+    }
+
+    func testDropDesktopKeyFocusSafelyExecutes() {
+        WindowManager.shared.dropDesktopKeyFocus()
+        // Must succeed without crashing even when no panels are key
     }
 }

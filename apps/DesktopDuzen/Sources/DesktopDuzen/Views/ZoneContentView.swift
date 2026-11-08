@@ -410,7 +410,16 @@ public struct KeyEventHandlerView: NSViewRepresentable {
             monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] event in
                 guard let self = self, let window = self.window, event.window === window else { return event }
                 if window.firstResponder is NSText { return event }
-                return (self.onKeyDown?(event) ?? false) ? nil : event
+                let handled = self.onKeyDown?(event) ?? false
+                if handled { return nil }
+                // If a zone panel held key status and receives an unhandled shortcut (e.g. Cmd-Shift-E),
+                // surrender key focus back to the frontmost app and forward the keystroke.
+                if let panel = window as? DesktopPanel, panel.isKeyWindow {
+                    WindowManager.shared.dropDesktopKeyFocus()
+                    event.cgEvent?.post(tap: .cghidEventTap)
+                    return nil
+                }
+                return event
             }
         }
 

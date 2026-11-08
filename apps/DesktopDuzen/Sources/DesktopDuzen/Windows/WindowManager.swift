@@ -143,7 +143,7 @@ public final class WindowManager: ObservableObject {
 
     /// Standard (non-desktop) windows the user can see.
     private func visibleAppWindows(excluding closing: NSWindow? = nil) -> [NSWindow] {
-        NSApp.windows.filter { w in
+        (NSApp?.windows ?? []).filter { w in
             w !== closing && w.isVisible && !w.isMiniaturized && !(w is DesktopPanel)
                 && w.level != DesktopPanel.desktopLevel && w.className != "NSStatusBarWindow"
                 && !w.className.contains("Menu") && w.frame.width > 40
@@ -155,16 +155,25 @@ public final class WindowManager: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in self?.dropDesktopKeyFocus() }
     }
 
-    /// Removes keyboard focus from any zone or widget panel while another app is frontmost.
+    /// Removes keyboard focus from any zone or widget panel and restores focus to the frontmost app.
     public func dropDesktopKeyFocus() {
-        guard !NSApp.isActive else { return }
-        for case let panel as DesktopPanel in NSApp.windows where panel.isKeyWindow {
+        guard let app = NSApplication.shared as NSApplication? else { return }
+        var droppedAny = false
+        for case let panel as DesktopPanel in app.windows where panel.isKeyWindow {
             panel.makeFirstResponder(nil)
-            // There is no public "resign key" call; re-ordering the panel hands key status back
-            // to the window server without moving or hiding it for longer than one frame.
+            // Re-ordering the panel hands key status back to the window server without moving it.
             let wasVisible = panel.isVisible
             panel.orderOut(nil)
             if wasVisible { panel.orderFrontRegardless() }
+            droppedAny = true
+        }
+        if droppedAny || !app.isActive {
+            if let front = NSWorkspace.shared.frontmostApplication,
+               front.processIdentifier != ProcessInfo.processInfo.processIdentifier {
+                front.activate(options: [])
+            } else if let prev = previousApp, !prev.isTerminated {
+                prev.activate(options: [])
+            }
         }
     }
 

@@ -18,6 +18,8 @@ public struct AppSettings: Codable, Equatable {
     /// When false (default) clicking a zone leaves keyboard focus with the frontmost app, so
     /// macOS and app shortcuts keep working. Zones still take focus for text editing.
     public var zonesTakeKeyboardFocus: Bool
+    /// Off by default: DesktopDüzen lives in the menu bar, not the Dock or Cmd-Tab.
+    public var showDockIcon: Bool
 
     public init(
         launchAtLogin: Bool = false,
@@ -33,7 +35,8 @@ public struct AppSettings: Codable, Equatable {
         hasCompletedOnboarding: Bool = false,
         showHubOnLaunch: Bool = true,
         hideTitleBarsUntilHover: Bool = true,
-        zonesTakeKeyboardFocus: Bool = false
+        zonesTakeKeyboardFocus: Bool = false,
+        showDockIcon: Bool = false
     ) {
         self.launchAtLogin = launchAtLogin
         self.alignmentMode = alignmentMode
@@ -49,12 +52,13 @@ public struct AppSettings: Codable, Equatable {
         self.showHubOnLaunch = showHubOnLaunch
         self.hideTitleBarsUntilHover = hideTitleBarsUntilHover
         self.zonesTakeKeyboardFocus = zonesTakeKeyboardFocus
+        self.showDockIcon = showDockIcon
     }
 
     enum CodingKeys: String, CodingKey {
         case launchAtLogin, alignmentMode, snapToGrid, snapToNeighbors, gridSize, snapThreshold
         case showZonesOnAllSpaces, autoSortEnabled, hideLooseDesktopIcons, globalHotkeyEnabled
-        case hasCompletedOnboarding, showHubOnLaunch, hideTitleBarsUntilHover, zonesTakeKeyboardFocus
+        case hasCompletedOnboarding, showHubOnLaunch, hideTitleBarsUntilHover, zonesTakeKeyboardFocus, showDockIcon
     }
 
     public init(from decoder: Decoder) throws {
@@ -74,6 +78,7 @@ public struct AppSettings: Codable, Equatable {
         showHubOnLaunch = c.value(.showHubOnLaunch, default: d.showHubOnLaunch)
         hideTitleBarsUntilHover = c.value(.hideTitleBarsUntilHover, default: d.hideTitleBarsUntilHover)
         zonesTakeKeyboardFocus = c.value(.zonesTakeKeyboardFocus, default: d.zonesTakeKeyboardFocus)
+        showDockIcon = c.value(.showDockIcon, default: d.showDockIcon)
     }
 }
 

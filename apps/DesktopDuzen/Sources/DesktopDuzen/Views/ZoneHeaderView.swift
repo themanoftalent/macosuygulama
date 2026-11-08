@@ -34,7 +34,11 @@ public struct ZoneHeaderView: View {
                         .cornerRadius(4)
                         .focused($titleFieldFocused)
                         .onSubmit(commitRename)
-                        .onExitCommand { isEditingTitle = false }
+                        .onExitCommand {
+                            isEditingTitle = false
+                            controller.panel.makeFirstResponder(nil)
+                            WindowManager.shared.dropDesktopKeyFocus()
+                        }
                         .onAppear { titleFieldFocused = true }
                 } else {
                     // Full title when it fits, otherwise initials ("Quick Launcher" -> "QL"),
@@ -228,6 +232,8 @@ public struct ZoneHeaderView: View {
             appState.renameZone(id: zone.id, newTitle: trimmed)
         }
         isEditingTitle = false
+        controller.panel.makeFirstResponder(nil)
+        WindowManager.shared.dropDesktopKeyFocus()
     }
 
     private func togglePinOnTop() {
