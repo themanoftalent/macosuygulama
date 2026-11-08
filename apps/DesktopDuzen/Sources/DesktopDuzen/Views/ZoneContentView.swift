@@ -414,9 +414,15 @@ public struct KeyEventHandlerView: NSViewRepresentable {
                 if handled { return nil }
                 // If a zone panel held key status and receives an unhandled shortcut (e.g. Cmd-Shift-E),
                 // surrender key focus back to the frontmost app and forward the keystroke.
-                if let panel = window as? DesktopPanel, panel.isKeyWindow {
+                // Only while another app is frontmost: when DesktopDüzen itself is active, dropping focus
+                // is a no-op, so a re-posted key would come straight back here in an endless loop, and
+                // menu shortcuts (Cmd-Q, Cmd-,) must reach the menu. Posting also needs Accessibility
+                // permission; without it the key would be silently lost, so leave it alone.
+                if let panel = window as? DesktopPanel, panel.isKeyWindow, !NSApp.isActive, AXIsProcessTrusted(),
+                   let cgEvent = event.cgEvent?.copy() {
                     WindowManager.shared.dropDesktopKeyFocus()
-                    event.cgEvent?.post(tap: .cghidEventTap)
+                    guard !panel.isKeyWindow else { return event }
+                    cgEvent.post(tap: .cghidEventTap)
                     return nil
                 }
                 return event
