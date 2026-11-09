@@ -40,8 +40,64 @@
 
 /* Filter logic */
 .app-card.hidden { display: none !important; }
+.hidden-view { display: none !important; }
+
+/* OS Switcher Controls */
+.os-switcher-wrap { display: flex; justify-content: center; margin: 36px 0 24px; }
+.os-tabs-nav { display: inline-flex; background: #e2e8dc; padding: 6px; border-radius: 40px; border: 1px solid var(--line); gap: 6px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.04); }
+.os-tab-btn { background: transparent; border: none; padding: 11px 24px; border-radius: 32px; font-size: 14px; font-weight: 700; color: var(--ink); cursor: pointer; transition: all 0.22s ease; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.os-tab-btn:hover { color: #111; background: rgba(255,255,255,0.45); }
+.os-tab-btn.active { background: #fff; color: var(--ink); box-shadow: 0 4px 14px rgba(24,59,53,0.12); }
+.os-tab-badge { font-size: 11px; padding: 2px 8px; border-radius: 12px; background: #d7e0d1; color: #355246; font-weight: 600; }
+.os-tab-btn.active .os-tab-badge { background: var(--ink); color: #fff; }
+
+/* OS Badges on Cards */
+.os-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.os-badge.macos { background: #eaf1e7; color: #284d3e; border: 1px solid #c9d8c4; }
+.os-badge.windows { background: #e5f0fa; color: #134e7c; border: 1px solid #b9d8f3; }
+.os-badge.universal { background: #fef7e6; color: #855307; border: 1px solid #f9dfaa; }
+
+.status-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-left: auto; }
+.status-badge.live { background: #e6f9ed; color: #166c3b; border: 1px solid #a8e8be; }
+.status-badge.coming-soon { background: #fff4e5; color: #9c5400; border: 1px solid #fed8a6; }
+
+.version-pill { font-size: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #526f63; background: #edf2ea; padding: 2px 6px; border-radius: 4px; }
+
+/* Disabled / Coming Soon Action Buttons */
+.btn-disabled { background: #ecefe9; color: #8a9e93; border: 1px solid #d8dfd4; padding: 9px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: not-allowed; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+
+/* Windows Spotlight Card */
+.app-card.featured-windows { border: 2px solid #235848; background: linear-gradient(180deg, #ffffff 0%, #fbfdfa 100%); box-shadow: 0 10px 30px rgba(35,88,72,0.1); }
+.windows-featured-banner { background: #f0f5ee; border: 1px solid #c8d8c2; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.windows-downloads-group { background: #f4f7f2; border: 1px solid #dce4d7; border-radius: 12px; padding: 18px; margin: 16px 0; }
+.windows-download-title { font-size: 13px; font-weight: 700; color: var(--ink); margin: 0 0 10px; display: flex; align-items: center; justify-content: space-between; }
+.windows-download-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+
+/* SHA-256 Box */
+.hash-container { background: #202b26; border-radius: 8px; padding: 10px 14px; margin-top: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; color: #d6ed65; display: flex; align-items: center; justify-content: space-between; gap: 10px; word-break: break-all; }
+.hash-label { color: #8fa79b; font-size: 10.5px; display: block; margin-bottom: 2px; }
+.hash-val { line-height: 1.4; color: #eaf8c2; }
+.copy-hash-btn { background: #2f4038; color: #fff; border: 1px solid #4a6358; padding: 5px 10px; border-radius: 5px; font-size: 11px; cursor: pointer; white-space: nowrap; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; transition: background 0.2s; }
+.copy-hash-btn:hover { background: #40594e; }
+.copy-hash-btn.copied { background: #2e7d32; border-color: #4caf50; }
+
+/* Security & Verification Section */
+.windows-security-wrap { margin-top: 55px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 36px 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+.windows-security-header { margin-bottom: 24px; }
+.windows-security-header h3 { font-size: 24px; margin: 0 0 8px; letter-spacing: -0.5px; color: var(--ink); }
+.windows-security-header p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.6; }
+.security-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+.security-step { background: #f8faf6; border: 1px solid #e1e8dd; border-radius: 12px; padding: 22px; }
+.security-step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 12px; font-weight: 700; margin-bottom: 12px; }
+.security-step h4 { font-size: 16px; margin: 0 0 8px; font-weight: 650; color: var(--ink); }
+.security-step p { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0; }
+.security-code { background: #1f2723; color: #d6ed65; padding: 8px 12px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; margin-top: 10px; display: block; overflow-x: auto; }
 
 @media(max-width:900px){
   .apps-grid { grid-template-columns: 1fr; }
   .tenets-grid { grid-template-columns: 1fr; gap: 20px; }
+  .security-grid { grid-template-columns: 1fr; gap: 16px; }
+  .os-tabs-nav { width: 100%; justify-content: center; }
+  .os-tab-btn { flex: 1; justify-content: center; padding: 10px 14px; font-size: 13px; }
 }
+

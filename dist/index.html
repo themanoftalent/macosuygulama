@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="macOS Uygulama: A collection of high-performance, native, and open-source macOS applications developed by Mehmet Akif Çifçi. Featuring AlePdf, Temizale, Miknatizale, RecordAle, Foldale, and more.">
-  <title>macOS Uygulama — Native, Fast & Open-Source macOS Suite</title>
+  <meta name="description" content="macOS & Windows Apps: A curated collection of native, fast, open-source desktop applications built by Mehmet Akif Çifçi. Featuring AlePdf, Temizale, DesktopDüzen, Miknatizale, RecordAle and more.">
+  <title>macOS & Windows Apps — Native, Fast & Open Source Desktop Software</title>
   <link rel="icon" href="/assets/cat-icon.png" type="image/png">
   <link rel="stylesheet" href="/style.css">
   <script src="/locale.js" defer></script>
@@ -14,17 +14,18 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header>
-    <a class="brand" href="/" aria-label="macOS Uygulama Home">
+    <a class="brand" href="/" aria-label="Desktop Apps Hub">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:4px;">
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.13.65-2.79 1.43-.58.67-1.09 1.76-1.03 2.82 1.07.08 2.18-.55 2.81-1.38z"/>
       </svg>
-      macOS Uygulama<span>NATIVE APP SUITE</span>
+      macOS & Windows Apps<span>DESKTOP APPLICATION SUITE</span>
     </a>
-    <nav aria-label="Main Menu">
-      <a href="#apps">Apps</a>
+    <nav aria-label="Main Navigation">
+      <a href="#apps" class="os-tab-btn" data-target-os="macos">macOS</a>
+      <a href="#apps" class="os-tab-btn" data-target-os="windows">Windows</a>
       <a href="#alepdf">AlePdf</a>
       <a href="#temizale">Temizale</a>
-      <a href="#principles">Principles</a>
+      <a href="#pillars">Pillars</a>
       <a class="follow" href="https://github.com/themanoftalent" target="_blank" rel="noopener">Follow @themanoftalent ↗</a>
       <span class="language-switch" role="group" aria-label="Language">
         <a href="/tr/?lang=tr" lang="tr">TR</a>
@@ -37,365 +38,772 @@
     <!-- Hero Section -->
     <section class="hero wrap">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="dot"></span> NATIVE ARCHITECTURE · LOCAL FIRST · 100% PRIVATE</p>
-        <h1>Independent, native,<br>and powerful <em>macOS apps.</em></h1>
-        <p class="lead">From comprehensive in-place PDF editing and deep system cleaning to smart window snapping and screen recording: an ecosystem of open-source macOS apps crafted in Swift and Rust for peak performance.</p>
+        <p class="eyebrow"><span class="dot"></span> NATIVE ARCHITECTURE · LOCAL-FIRST · 100% PRIVATE</p>
+        <h1>Independent, native<br>apps for macOS & Windows.</h1>
+        <p class="lead">From advanced PDF document editing to deep system cleanup, desktop organization, and studio-grade screen walkthroughs: high-performance open-source desktop apps engineered with Swift and Rust.</p>
         <div class="actions">
-          <a class="button" href="#apps">Explore All Apps <span>↓</span></a>
+          <a class="button" href="#apps">Explore Applications <span>↓</span></a>
           <a class="text-link" href="https://github.com/themanoftalent" target="_blank" rel="noopener">GitHub Profile (@themanoftalent) ↗</a>
         </div>
-        <p class="micro">Apple Silicon (M1/M2/M3/M4) & Universal · Open-Source Foundation</p>
+        <p class="micro">macOS (Apple Silicon & Universal) · Windows 10 & 11 (64-bit) · Open Source</p>
         <div class="hero-note">
-          <span>01 / BUILT FOR YOUR DESKTOP</span>
-          <p>Your documents and data stay on your machine.<br>No forced subscriptions or external tracking.</p>
+          <span>01 / DESIGNED FOR YOUR DESKTOP</span>
+          <p>Your documents stay strictly on your device.<br>Zero subscriptions or forced sign-ups.</p>
         </div>
       </div>
       <figure class="hero-art">
         <div class="image-label">
-          <span>FEATURED APP</span>
+          <span>CROSS-PLATFORM</span>
           <span>ALEPDF WORKSPACE</span>
         </div>
-        <img src="/assets/alepdf-editor.png" alt="AlePdf Desktop PDF Workspace" width="960" height="1003" fetchpriority="high">
-        <figcaption>AlePdf — In-place PDF editing, annotations, and form tools for macOS</figcaption>
+        <img src="/assets/alepdf-editor.png" alt="AlePdf desktop PDF editor workspace" width="960" height="1003" fetchpriority="high">
+        <figcaption>AlePdf — Native PDF editing and markup workspace for macOS & Windows 10/11</figcaption>
       </figure>
     </section>
 
     <!-- Info Strip -->
     <div class="strip">
       <div class="wrap">
-        <span>⚡ 10+ Native macOS Apps</span>
-        <span>🔒 100% Local File Security</span>
-        <span>🌐 Apple Silicon & Universal</span>
-        <span>💻 Open Source on GitHub</span>
+        <span>⚡ 11+ Native Desktop Tools</span>
+        <span>🍏 macOS & 🪟 Windows Support</span>
+        <span>🔒 100% Local-First Data Privacy</span>
+        <span>💻 Fully Open Source on GitHub</span>
       </div>
     </div>
 
     <!-- Apps Hub Showcase -->
     <section class="wrap apps-hub" id="apps">
       <div class="section-heading">
-        <p class="eyebrow">APPLICATION ECOSYSTEM</p>
-        <h2>A dedicated native tool for every task.</h2>
-        <p>A suite of focused desktop utilities developed and actively maintained by Mehmet Akif Çifçi (@themanoftalent).</p>
+        <p class="eyebrow">APPLICATION CATALOG</p>
+        <h2>Curated, native desktop software.</h2>
+        <p>A suite of focused desktop apps authored and maintained by Mehmet Akif Çifçi (@themanoftalent).</p>
       </div>
 
-      <!-- Filter Buttons -->
-      <div class="filter-bar" role="toolbar" aria-label="Category Filters">
-        <button class="filter-btn active" data-filter="all">All (10)</button>
-        <button class="filter-btn" data-filter="docs">Documents & PDF</button>
-        <button class="filter-btn" data-filter="system">System & Cleaner</button>
-        <button class="filter-btn" data-filter="productivity">Window & Productivity</button>
-        <button class="filter-btn" data-filter="media">Screen & Media</button>
-        <button class="filter-btn" data-filter="menubar">Menu Bar</button>
+      <!-- OS Switcher Bar -->
+      <div class="os-switcher-wrap">
+        <div class="os-tabs-nav" role="tablist" aria-label="Operating System Selection">
+          <button class="os-tab-btn active" id="tab-macos" data-target-os="macos" role="tab" aria-selected="true" aria-controls="macos-showcase">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.13.65-2.79 1.43-.58.67-1.09 1.76-1.03 2.82 1.07.08 2.18-.55 2.81-1.38z"/></svg>
+            macOS Applications <span class="os-tab-badge">11 Apps</span>
+          </button>
+          <button class="os-tab-btn" id="tab-windows" data-target-os="windows" role="tab" aria-selected="false" aria-controls="windows-showcase">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.45l7.35-1v7.1H3V5.45zm0 13.1l7.35 1v-7.1H3v6.1zm8.35 1.13L21 21.3V11.55H11.35v8.13zm0-15.36v8.13H21V2.7l-9.65 1.62z"/></svg>
+            Windows Applications <span class="os-tab-badge">AlePDF Live</span>
+          </button>
+        </div>
       </div>
 
-      <!-- Apps Grid -->
-      <div class="apps-grid">
-        <!-- 1. AlePdf -->
-        <article class="app-card" data-category="docs productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/alepdf.png" alt="AlePdf Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Document & PDF Studio</span>
-              <h3>AlePdf</h3>
-            </div>
-          </div>
-          <p class="app-tagline">A local PDF editing workspace for macOS.</p>
-          <p class="app-desc">In-place text and image editing, page organization, interactive forms, visual signature stamps, and vector drawings. Local-first architecture without browser bloat.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Rust</span>
-            <span class="tech-tag">Local-First</span>
-            <span class="tech-tag">Apple Silicon</span>
-            <span class="tech-tag">Windows x64</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">Download DMG (v0.18.2)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">GitHub ↗</a>
-            <a class="btn-secondary" href="#alepdf">Details ↓</a>
-          </div>
-        </article>
+      <!-- ==================== macOS SHOWCASE ==================== -->
+      <div id="macos-showcase" class="os-showcase-panel">
+        <!-- Category Filter Buttons for macOS -->
+        <div class="filter-bar" role="toolbar" aria-label="macOS Category Filters">
+          <button class="filter-btn active" data-filter="all">All (11)</button>
+          <button class="filter-btn" data-filter="docs">Docs & PDF</button>
+          <button class="filter-btn" data-filter="system">System & Cleaner</button>
+          <button class="filter-btn" data-filter="productivity">Productivity & Window</button>
+          <button class="filter-btn" data-filter="media">Screen & Media</button>
+          <button class="filter-btn" data-filter="menubar">Menu Bar</button>
+        </div>
 
-        <!-- 2. Temizale -->
-        <article class="app-card" data-category="system">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/temizale.png" alt="Temizale Icon">
-            <div class="app-title-group">
-              <span class="app-cat">System & Cleaner</span>
-              <h3>Temizale</h3>
+        <!-- macOS Apps Grid -->
+        <div class="apps-grid">
+          <!-- 1. AlePdf -->
+          <article class="app-card" data-category="docs productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alepdf.png" alt="AlePdf Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">PDF & Document Studio</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>AlePdf</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Modern, lightweight macOS cache cleaner & uninstaller.</p>
-          <p class="app-desc">Safely scan and purge system and user caches, leftover application debris, and stubborn trash files to reclaim disk space and boost responsiveness.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">SwiftUI</span>
-            <span class="tech-tag">Universal (ARM64/x86_64)</span>
-            <span class="tech-tag">macOS 14+</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/Temizale/releases/download/v2.2.0/Temizale-2.2.0.dmg">Download DMG (v2.2.0)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/Temizale" target="_blank" rel="noopener">GitHub ↗</a>
-            <a class="btn-secondary" href="#temizale">Details ↓</a>
-          </div>
-        </article>
+            <p class="app-tagline">Native, fast and feature-complete PDF workspace.</p>
+            <p class="app-desc">In-place text and image editing, visual page reordering, interactive form fill, digital signatures and pen annotations. Completely local, no browser required.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Local-First</span>
+              <span class="tech-tag">Apple Silicon</span>
+              <span class="tech-tag">v0.18.2</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">Download DMG (v0.18.2)</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="btn-secondary" href="#alepdf">Details ↓</a>
+            </div>
+          </article>
 
-        <!-- 3. Miknatizale -->
-        <article class="app-card" data-category="productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/miknatizale.png" alt="Miknatizale Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Window Management</span>
-              <h3>Miknatizale</h3>
+          <!-- 2. Temizale -->
+          <article class="app-card" data-category="system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/temizale.png" alt="Temizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">System & Cleaner</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Temizale</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Pixel-perfect native window snapping and tiling tool.</p>
-          <p class="app-desc">Organize workspaces with intuitive keyboard shortcuts and edge dragging to snap windows into halves, thirds, or quadrants with zero input lag.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">AppKit</span>
-            <span class="tech-tag">Multi-Display</span>
-            <span class="tech-tag">Zero Lag</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">Explore Project ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Modern, lightweight macOS system cleaner & uninstaller.</p>
+            <p class="app-desc">Purge deep user and system caches, detect orphaned app leftovers, and reclaim disk space with zero background telemetry or persistent daemons.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">SwiftUI</span>
+              <span class="tech-tag">Universal</span>
+              <span class="tech-tag">v2.2.0</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/Temizale/releases/download/v2.2.0/Temizale-2.2.0.dmg">Download DMG (v2.2.0)</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Temizale" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="btn-secondary" href="#temizale">Details ↓</a>
+            </div>
+          </article>
 
-        <!-- 4. RecordAle -->
-        <article class="app-card" data-category="media">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/recordale.png" alt="RecordAle Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Screen & Video Studio</span>
-              <h3>RecordAle</h3>
+          <!-- 3. DesktopDüzen -->
+          <article class="app-card" data-category="productivity desktop menubar">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/desktopduzen.png" alt="DesktopDüzen Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Desktop Organizer</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>DesktopDüzen</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Produce polished walkthroughs and product demos effortlessly.</p>
-          <p class="app-desc">Engineered for creators: dynamic auto-zooming, smooth cursor tracks, webcam bubble overlay, studio frame styles, and custom video backgrounds.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Native Motion</span>
-            <span class="tech-tag">High FPS</span>
-            <span class="tech-tag">Webcam Bubble</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">Explore Project ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Organize your Mac desktop with interactive zones pinned to your wallpaper.</p>
+            <p class="app-desc">Stardock Fences-style desktop organization with native macOS performance. Group files into responsive zones, link custom directory portals, and customize with 27 liquid glass themes.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift</span>
+              <span class="tech-tag">AppKit & SwiftUI</span>
+              <span class="tech-tag">Menu Bar</span>
+              <span class="tech-tag">v1.1.0</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/macosuygulama/raw/main/apps/DesktopDuzen/DesktopDuzen.dmg">Download DMG (v1.1.0)</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/macosuygulama/tree/main/apps/DesktopDuzen" target="_blank" rel="noopener">Source Code ↗</a>
+            </div>
+          </article>
 
-        <!-- 5. Foldale -->
-        <article class="app-card" data-category="docs productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/foldale.png" alt="Foldale Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Dual-Pane File Manager</span>
-              <h3>Foldale</h3>
+          <!-- 4. Miknatizale -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/miknatizale.png" alt="Miknatizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Window Management & Tiling</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Miknatizale</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Marta keyboard speed meets familiar desktop file browsing.</p>
-          <p class="app-desc">Dual-pane efficiency, keyboard navigation, multi-tab layout, and an asynchronous Rust transfer engine for instantaneous file manipulation.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Rust Engine</span>
-            <span class="tech-tag">Dual-Pane</span>
-            <span class="tech-tag">Keyboard-Driven</span>
-            <span class="tech-tag">Tabs</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">Explore Project ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Pixel-perfect native window snapping and screen tiling.</p>
+            <p class="app-desc">Snap windows to halves, thirds, and quarters using fast keyboard shortcuts and intuitive edge dragging. Magnet-like experience in pure native Swift.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">AppKit</span>
+              <span class="tech-tag">Multi-Display</span>
+              <span class="tech-tag">Zero Lag</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 6. Saklamac Pro -->
-        <article class="app-card" data-category="system menubar">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/saklamac.png" alt="Saklamac Pro Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Menu Bar Manager</span>
-              <h3>Saklamac Pro</h3>
+          <!-- 5. RecordAle -->
+          <article class="app-card" data-category="media">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/recordale.png" alt="RecordAle Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Screen & Video Recording</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>RecordAle</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Notch-friendly, multi-zone menu bar organizer.</p>
-          <p class="app-desc">Hide cluttered menu bar icons, reveal tools on a floating overflow shelf, and find any active status item instantly with Spotlight-style search.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">Notch Safe</span>
-            <span class="tech-tag">Spotlight Search</span>
-            <span class="tech-tag">Profiles</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">Explore Project ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Studio walkthroughs with automatic cursor zooming.</p>
+            <p class="app-desc">Dynamic cursor follow, auto-zoom on clicks, beautiful studio backdrops, and webcam bubble overlays. Turn screen recordings into production demo videos.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Native Motion</span>
+              <span class="tech-tag">High FPS</span>
+              <span class="tech-tag">Webcam Bubble</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 7. AleClip -->
-        <article class="app-card" data-category="productivity menubar">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/aleclip.png" alt="AleClip Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Clipboard History</span>
-              <h3>AleClip</h3>
+          <!-- 6. Foldale -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/foldale.png" alt="Foldale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">File Manager</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Foldale</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Lightweight, native, and privacy-respecting clipboard manager — with automatic Mac & iOS sync.</p>
-          <p class="app-desc">Instantly search and paste copied text, images, code snippets, and URLs. Clear clips with Delete All (with confirmation safeguard) or multi-select, keep copies in your own Google Drive, and enjoy real-time automatic bidirectional synchronization with deletion tombstones between Mac and iPhone/iPad. 100% on-device, zero telemetry.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">macOS · iOS · Android</span>
-            <span class="tech-tag">Live Google Drive Sync</span>
-            <span class="tech-tag">TestFlight Ready</span>
-            <span class="tech-tag">Local Privacy</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/aleclip/releases/download/v2.2.0/AleClip-2.2.0.dmg">Download DMG (v2.2.0)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/aleclip" target="_blank" rel="noopener">Mac GitHub ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/aleclip-ios" target="_blank" rel="noopener">iOS (TestFlight) ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/aleclip-android" target="_blank" rel="noopener">Android ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Dual-pane, keyboard-driven file manager for power users.</p>
+            <p class="app-desc">High-speed file management inspired by classic Commander utilities. Rust-powered indexer moves, filters, and diffs large directory structures effortlessly.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Dual-Pane</span>
+              <span class="tech-tag">Vim Keys</span>
+              <span class="tech-tag">Ultra Fast</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 8. AleCal -->
-        <article class="app-card" data-category="menubar productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/alecal.png" alt="AleCal Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Menu Bar Calendar</span>
-              <h3>AleCal v2.0</h3>
+          <!-- 7. Saklamac Pro -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/saklamac.png" alt="Saklamac Pro Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Menu Bar Manager</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Saklamac Pro</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Glassmorphic menu bar calendar with one-click meetings.</p>
-          <p class="app-desc">Quickly view schedules, jump into Google Meet, Zoom, or Teams calls with a single tap, and monitor live status badges without cluttering your dock.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">SwiftUI</span>
-            <span class="tech-tag">Glassmorphism</span>
-            <span class="tech-tag">1-Click Join</span>
-            <span class="tech-tag">Live Badges</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">Explore Project ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Tame cluttered menu bar icons with intelligent collapsing.</p>
+            <p class="app-desc">Status bar organizer tailored for modern MacBook displays with notch geometry. Hide background status items with one click and reveal on demand.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">SwiftUI</span>
+              <span class="tech-tag">Notch-Safe</span>
+              <span class="tech-tag">MenuBar</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 9. AleBar -->
-        <article class="app-card" data-category="menubar system">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/alebar.png" alt="AleBar Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Menu Bar Customizer</span>
-              <h3>AleBar</h3>
+          <!-- 8. AleClip -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aleclip.png" alt="AleClip Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Clipboard & Memory Manager</span>
+                  <span class="os-badge macos">macOS & iOS</span>
+                </div>
+                <h3>AleClip</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Gain full control over your macOS status bar.</p>
-          <p class="app-desc">Keep your menu bar minimal and focused. Automatically conceal icons based on custom trigger conditions and invoke a keyboard command palette.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">Command Palette</span>
-            <span class="tech-tag">Smart Triggers</span>
-            <span class="tech-tag">Styling</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">Explore Project ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Fast, encrypted, loss-free clipboard history organizer.</p>
+            <p class="app-desc">Stores copied text, snippets, rich code, and images in a local encrypted SQLite database. Features bidirectional Google Drive sync and iOS TestFlight client.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">AppKit</span>
+              <span class="tech-tag">Encrypted DB</span>
+              <span class="tech-tag">Google Drive Sync</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/AleClip" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleClip" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 10. AleDesk -->
-        <article class="app-card" data-category="productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/aledesk.png" alt="AleDesk Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Remote Desktop</span>
-              <h3>AleDesk</h3>
+          <!-- 9. AleCal -->
+          <article class="app-card" data-category="menubar productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alecal.png" alt="AleCal Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Menu Bar Calendar</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>AleCal</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Ultra-low latency, secure, and lightweight remote desktop.</p>
-          <p class="app-desc">Control computers and transfer files securely through end-to-end peer encryption with zero hassle and absolute privacy.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Rust & C++</span>
-            <span class="tech-tag">P2P Encryption</span>
-            <span class="tech-tag">Low Latency</span>
-            <span class="tech-tag">File Transfer</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">Explore Project ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">One-click mini calendar living in your menu bar.</p>
+            <p class="app-desc">Glassmorphic mini calendar integrating seamlessly with macOS Calendars and Reminders. Displays week numbers, event dots, and quick event previews.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">SwiftUI</span>
+              <span class="tech-tag">EventKit</span>
+              <span class="tech-tag">Glassmorphic</span>
+              <span class="tech-tag">MenuBar</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 10. DesktopDüzen -->
-        <article class="app-card" data-category="productivity desktop">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/desktopduzen.png" alt="DesktopDüzen Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Desktop Organizer</span>
-              <h3>DesktopDüzen</h3>
+          <!-- 10. AleBar -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alebar.png" alt="AleBar Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Menu Bar Customizer</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>AleBar</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Partition, tint and customize your macOS menu bar.</p>
+            <p class="app-desc">Adds elegant dividers, subtle shadows, custom icons, and visual segmentation to make the menu bar feel truly yours.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">CoreGraphics</span>
+              <span class="tech-tag">Customizable</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 11. AleDesk -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aledesk.png" alt="AleDesk Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Remote Desktop Client</span>
+                  <span class="os-badge macos">macOS & Windows</span>
+                </div>
+                <h3>AleDesk</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Ultra-low latency, peer-to-peer remote desktop.</p>
+            <p class="app-desc">Securely connect to your Mac or Windows workstations from anywhere. Features high frame rates, end-to-end encryption, and smooth input passthrough.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">P2P Encryption</span>
+              <span class="tech-tag">Low-Latency</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">View Project ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ==================== Windows SHOWCASE ==================== -->
+      <div id="windows-showcase" class="os-showcase-panel hidden-view">
+        <!-- Windows Featured Announcement -->
+        <div class="windows-featured-banner">
+          <div>
+            <span class="os-badge windows">Windows 10 & Windows 11 (64-bit)</span>
+            <h3 style="font-size:18px; margin:6px 0 3px; color:var(--ink);">AlePDF for Windows is Live & Ready to Download</h3>
+            <p style="margin:0; font-size:13px; color:var(--muted); line-height:1.5;">Verified 64-bit Inno Setup installer package, portable ZIP archive, and published SHA-256 verification hash.</p>
+          </div>
+          <a href="#windows-security" class="btn-secondary" style="font-size:12px;">Safe Installation & Verification Guide ↓</a>
+        </div>
+
+        <!-- Windows Apps Grid -->
+        <div class="apps-grid">
+          <!-- 1. AlePdf (Windows x64 - Fully Working & Live) -->
+          <article class="app-card featured-windows" data-category="docs productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alepdf.png" alt="AlePdf Windows Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows 10 & 11 (x64)</span>
+                  <span class="status-badge live">● Live & Ready</span>
+                  <span class="version-pill">v0.15.0</span>
+                </div>
+                <h3>AlePdf for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Native, fast, and feature-complete Windows PDF workspace.</p>
+            <p class="app-desc">Standalone 64-bit Windows desktop application compiled directly with a Rust core and GPU-accelerated wgpu graphics pipeline. No browser or Webview dependency. Features in-place document editing, visual page organization, interactive form filling, digital signatures, and freehand drawing.</p>
+            
+            <div class="tech-tags">
+              <span class="tech-tag">Rust 2024</span>
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Inno Setup</span>
+              <span class="tech-tag">Local-First</span>
+              <span class="tech-tag">Zero Telemetry</span>
+              <span class="tech-tag">Lowest Privilege</span>
+            </div>
+
+            <!-- Direct Windows Downloads -->
+            <div class="windows-downloads-group">
+              <div class="windows-download-title">
+                <span>📦 Windows Release Packages</span>
+                <span style="font-size:11px;font-weight:600;color:#285640;">Windows 10 / 11 Compatible</span>
+              </div>
+              <div class="windows-download-buttons">
+                <a class="btn-primary" href="https://github.com/themanoftalent/alepdf/releases/download/alepdf-windows-preview-8/AlePdf-0.15.0-windows-x64-setup.exe" download>
+                  ⬇ Download AlePDF-Setup-x64.exe (74.6 MB)
+                </a>
+                <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf/releases/download/alepdf-windows-preview-8/AlePdf-0.15.0-windows-x64-portable.zip" download>
+                  📦 Portable ZIP Archive
+                </a>
+                <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf/releases/tag/alepdf-windows-preview-8" target="_blank" rel="noopener">
+                  Release Notes ↗
+                </a>
+              </div>
+
+              <!-- SHA-256 Checksum Container -->
+              <div class="hash-container">
+                <div>
+                  <span class="hash-label">AlePdf-Setup-x64.exe SHA-256 Checksum:</span>
+                  <span class="hash-val">5ef1c9eaabc9cc921d17a0c914480d82fc1b7ec2ead3d2664bb0ddfbb8754369</span>
+                </div>
+                <button class="copy-hash-btn" data-hash="5ef1c9eaabc9cc921d17a0c914480d82fc1b7ec2ead3d2664bb0ddfbb8754369" data-copied-text="Copied!">Copy</button>
+              </div>
+            </div>
+
+            <div class="app-card-actions">
+              <a class="btn-secondary" href="#windows-security">Security & Setup Guide ↓</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">Source Code ↗</a>
+            </div>
+          </article>
+
+          <!-- 2. DesktopDüzen (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity desktop">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/desktopduzen.png" alt="DesktopDüzen Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>DesktopDüzen for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Windows Desktop Fences and Zone Organizer.</p>
+            <p class="app-desc">Organize cluttered Windows desktop icons into interactive shaded zones pinned to your wallpaper with automatic sorting rules and live folder integration.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Desktop Layer</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/macosuygulama/tree/main/apps/DesktopDuzen" target="_blank" rel="noopener">Source Code ↗</a>
+            </div>
+          </article>
+
+          <!-- 3. Temizale (Windows - Coming Soon) -->
+          <article class="app-card" data-category="system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/temizale.png" alt="Temizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>Temizale for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Windows System and Cache Cleaner.</p>
+            <p class="app-desc">Deep cleaning of Windows temporary files (%TEMP%), application cache artifacts, dump logs, and residual uninstall debris in a native Windows utility.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Disk Optimizer</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Temizale" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 4. Miknatizale (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/miknatizale.png" alt="Miknatizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>Miknatizale for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Fast Windows Window Tiling & Snapping.</p>
+            <p class="app-desc">Keyboard-driven, ultra-lightweight window management enhancing standard Windows Snap Assist with customizable shortcuts and multi-monitor layouts.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Window Tiling</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 5. RecordAle (Windows - Coming Soon) -->
+          <article class="app-card" data-category="media">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/recordale.png" alt="RecordAle Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>RecordAle for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Studio Walkthrough Screen Recorder.</p>
+            <p class="app-desc">Record polished demo and tutorial videos on Windows with auto-zoom cursor tracking, studio framing, and floating webcam bubble integration.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Screen Recorder</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 6. Foldale (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/foldale.png" alt="Foldale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>Foldale for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Dual-Pane High Speed File Manager.</p>
+            <p class="app-desc">Rust-powered dual-pane Commander file explorer for Windows with rapid keyboard navigation, tabbed browsing, and deep directory diffing.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Dual Pane</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 7. Saklamac Pro (Windows - Coming Soon) -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/saklamac.png" alt="Saklamac Pro Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>Saklamac for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Windows System Tray Icon Manager.</p>
+            <p class="app-desc">Declutter background notification icons in the Windows taskbar and system tray with one-click toggling and smart grouping.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">System Tray</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 8. AleClip (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aleclip.png" alt="AleClip Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>AleClip for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Encrypted Windows Clipboard History.</p>
+            <p class="app-desc">Stores copied text and images in a local encrypted SQLite database, syncing seamlessly with macOS and iOS devices via Google Drive.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Encrypted SQLite</span>
+              <span class="tech-tag">Cloud Sync</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleClip" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 9. AleCal (Windows - Coming Soon) -->
+          <article class="app-card" data-category="menubar productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alecal.png" alt="AleCal Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>AleCal for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Taskbar Mini Calendar & Schedule Viewer.</p>
+            <p class="app-desc">One-click mini calendar residing in the Windows taskbar tray, showing upcoming calendar events and week numbers in a clean interface.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Taskbar Widget</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 10. AleBar (Windows - Coming Soon) -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alebar.png" alt="AleBar Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>AleBar for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Taskbar Hardware Monitor & Status Bar.</p>
+            <p class="app-desc">Lightweight system telemetry monitor providing real-time CPU, memory, and network usage charts right in your Windows taskbar.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">System Monitor</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 11. AleDesk (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aledesk.png" alt="AleDesk Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Coming Soon</span>
+                </div>
+                <h3>AleDesk for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Ultra-Low Latency Remote Desktop Client.</p>
+            <p class="app-desc">Rust and C++ high-FPS remote desktop engine with end-to-end cryptographic encryption for fast PC-to-Mac and PC-to-PC control.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">In Development</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Release Coming Soon</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">Track on GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Windows Safe Installation & Verification Guide -->
+        <div class="windows-security-wrap" id="windows-security">
+          <div class="windows-security-header">
+            <h3>🛡️ Windows Safe Installation & Verification Guide</h3>
+            <p>Official guidance ensuring Windows users can verify, install, and run the software safely according to Microsoft best practices.</p>
+          </div>
+
+          <div class="security-grid">
+            <!-- Step 1: Verification -->
+            <div class="security-step">
+              <div class="security-step-num">1</div>
+              <h4>SHA-256 Integrity Verification</h4>
+              <p>To verify that your downloaded installer matches the authentic build, open Windows PowerShell and run:</p>
+              <code class="security-code">Get-FileHash -Algorithm SHA256 .\AlePdf-0.15.0-windows-x64-setup.exe</code>
+              <p style="margin-top:10px;">The computed hash must match the published hash: <code>5ef1c9eaabc9...</code> shown above.</p>
+            </div>
+
+            <!-- Step 2: SmartScreen & Defender -->
+            <div class="security-step">
+              <div class="security-step-num">2</div>
+              <h4>Microsoft Defender & SmartScreen</h4>
+              <p>AlePdf is open source and cleanly packaged to comply with Microsoft Defender security scans.</p>
+              <p style="margin-top:8px;">Because expensive enterprise Authenticode certificates ($400+/yr) are not yet acquired for this independent open-source project, Windows SmartScreen may display an "Unrecognized app" prompt. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong> to proceed.</p>
+            </div>
+
+            <!-- Step 3: Clean Setup -->
+            <div class="security-step">
+              <div class="security-step-num">3</div>
+              <h4>Lowest Privilege & Clean Uninstall</h4>
+              <p>The installer requires no administrative elevation (<code>PrivilegesRequired: lowest</code>) and installs into user profile (<code>%LOCALAPPDATA%\Programs\AlePdf</code>).</p>
+              <p style="margin-top:8px;">Zero background services, telemetry daemons, or hidden tasks. Full, clean uninstallation is supported via Windows Settings ▸ Installed apps or Control Panel.</p>
             </div>
           </div>
-          <p class="app-tagline">Organize your Mac desktop into interactive, customizable zones pinned to your wallpaper.</p>
-          <p class="app-desc">DesktopDüzen brings Stardock Fences style organization to macOS. Tidy loose clutter into File Zones backed by real folders that update live with Finder, link Folder Zones for quick access, and launch apps in 1 click from App Zones. Includes 27 themes with liquid glass, fully transparent zones whose labels turn black or white to match your wallpaper, themeable clock, calendar and system widgets, Quick Look previews, and smart auto-sort rules with a preview before anything moves. It runs quietly from the menu bar, stays out of the Dock and Cmd-Tab, and never takes your keyboard shortcuts away from the app you are using.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift</span>
-            <span class="tech-tag">AppKit & SwiftUI</span>
-            <span class="tech-tag">Desktop Canvas</span>
-            <span class="tech-tag">Live Folder Updates</span>
-            <span class="tech-tag">Local Privacy</span>
-            <span class="tech-tag">Menu Bar App</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/macosuygulama/raw/main/apps/DesktopDuzen/DesktopDuzen.dmg">Download DMG (v1.1.0)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/macosuygulama/tree/main/apps/DesktopDuzen" target="_blank" rel="noopener">Explore Source ↗</a>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
     <!-- Tenets / Principles Section -->
-    <section class="tenets-section" id="principles">
+    <section class="tenets-section" id="pillars">
       <div class="wrap">
         <div class="section-heading">
-          <p class="eyebrow">OUR ARCHITECTURAL PILLARS</p>
-          <h2>Six core tenets built into every application.</h2>
-          <p>Every tool in the suite is built adhering to the same uncompromising standards of performance, user privacy, and desktop independence.</p>
+          <p class="eyebrow">CORE ARCHITECTURAL PILLARS</p>
+          <h2>Six principles guiding every tool we build.</h2>
+          <p>Every application in our suite adheres to strict performance, transparency, and data privacy commitments.</p>
         </div>
 
         <div class="tenets-grid">
           <article class="tenet-card">
             <span class="tenet-num">01 / PERFORMANCE</span>
-            <h3>Native and Blazing Fast</h3>
-            <p>Written in Swift and Rust instead of resource-heavy web runtimes. Fully optimized to leverage Apple Silicon hardware acceleration.</p>
+            <h3>Native & Blazing Fast</h3>
+            <p>Built with Swift and Rust rather than heavy web runtimes. Fully utilizes hardware acceleration on Apple Silicon and modern x64 processors.</p>
           </article>
 
           <article class="tenet-card">
             <span class="tenet-num">02 / PRIVACY</span>
             <h3>Private by Default</h3>
-            <p>Your documents, caches, and clipboard data never leave your computer. No telemetry, user profiling, or compulsory accounts.</p>
+            <p>Your documents, caches, and clipboard data never leave your computer. Zero surveillance, background tracking, or mandatory accounts.</p>
           </article>
 
           <article class="tenet-card">
             <span class="tenet-num">03 / EXPERIENCE</span>
-            <h3>Authentic macOS Design</h3>
-            <p>Conforms to macOS Human Interface Guidelines with genuine glass effects, dark/light theme switching, and native keyboard shortcuts.</p>
+            <h3>Platform Authentic Feel</h3>
+            <p>Complies with Apple Human Interface Guidelines for macOS and fluent system aesthetics for Windows, ensuring native controls and shortcuts.</p>
           </article>
 
           <article class="tenet-card">
             <span class="tenet-num">04 / TRANSPARENCY</span>
-            <h3>Open Source & Free</h3>
-            <p>Transparent source code hosted publicly on GitHub. Free of forced paywalls, recurring subscriptions, or invasive ads.</p>
+            <h3>Open Source & Independent</h3>
+            <p>Codebases are published openly on GitHub. No predatory licensing, stealth subscription charges, or embedded advertisements.</p>
           </article>
 
           <article class="tenet-card">
             <span class="tenet-num">05 / EFFICIENCY</span>
             <h3>Low Memory & Battery Friendly</h3>
-            <p>Minimal RAM overhead and idle CPU footprints ensure your MacBook's battery life is respected all day long.</p>
+            <p>Minimal RAM footprint and energy-efficient GPU pipelines ensure your laptop battery remains uncompromised.</p>
           </article>
 
           <article class="tenet-card">
             <span class="tenet-num">06 / AUTOMATION</span>
-            <h3>Agent and CLI Ready</h3>
-            <p>Equipped with command-line tools, Model Context Protocol (MCP) integrations, and scripting hooks for seamless AI agent automation.</p>
+            <h3>Agent & CLI Ready</h3>
+            <p>Equipped with CLI commands and Model Context Protocol (MCP) integrations ready for modern AI coding agents and local workflows.</p>
           </article>
         </div>
       </div>
@@ -405,35 +813,34 @@
     <section class="wrap section" id="alepdf">
       <div class="section-heading">
         <p class="eyebrow">SPOTLIGHT: ALEPDF</p>
-        <h2>A focused, tranquil PDF workspace.</h2>
-        <p>Advanced navigation, in-place text & image editing, page organization, and local form signing.</p>
+        <h2>A focused workspace for everyday PDF work.</h2>
+        <p>Available on macOS and Windows 10/11 with in-place text editing, image replacement, visual page reordering, and form signing.</p>
       </div>
 
       <div class="features">
         <article>
           <span class="number">01</span>
-          <h3>Read and Review with Clarity.</h3>
-          <p>Navigate pages with fluid motion, customize your layout, and inspect documents in razor-sharp resolution.</p>
+          <h3>Focus & Reading.</h3>
+          <p>Smooth page navigation, adjustable views, and crisp rendering without leaving your desktop.</p>
           <span class="tag">PDF Viewing</span>
         </article>
         <article>
           <span class="number">02</span>
-          <h3>Edit Directly on the Canvas.</h3>
-          <p>Modify document typography and graphics in place, draw freehand vector paths, or add sticky annotations.</p>
-          <span class="tag">In-Place Editing</span>
+          <h3>In-Place Editing.</h3>
+          <p>Edit text and images directly inside the document. Add sticky notes, highlights, and vector pen annotations.</p>
+          <span class="tag">Content Editing</span>
         </article>
         <article>
           <span class="number">03</span>
-          <h3>Reorder Pages and Sign Forms.</h3>
-          <p>Rotate, delete, or merge pages, and complete AcroForm fields with genuine visual signature stamps.</p>
-          <span class="tag">Forms & Signatures</span>
+          <h3>Organize & Fill and Sign.</h3>
+          <p>Rotate, delete, and reorder pages. Fill form fields and place your authentic digital signature securely.</p>
+          <span class="tag">Form & Sign</span>
         </article>
       </div>
 
-      <p><strong>iPhone and iPad:</strong> A separate native AlePdf app is in App Store review (version 1.0, build 7, submitted November 7, 2026). It includes a redesigned home screen, reader, selectable-text search, annotations, and page tools. Build 7 fixes drawing on later pages jumping back to page 1 and preserves the current page, zoom, and scroll position during pen and marker edits. It is not yet available on the App Store; the macOS download below remains the desktop edition.</p>
-
-      <div class="actions" style="margin-top:40px;">
-        <a class="button" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">Download AlePdf DMG (v0.18.2) <span>↓</span></a>
+      <div class="actions" style="margin-top:40px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="button" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">Download macOS (DMG) <span>↓</span></a>
+        <a class="button" href="https://github.com/themanoftalent/alepdf/releases/download/alepdf-windows-preview-8/AlePdf-0.15.0-windows-x64-setup.exe" style="background:#134e7c;color:#fff;">Download Windows (Setup.exe) <span>↓</span></a>
         <a class="text-link" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">AlePdf GitHub Repository ↗</a>
       </div>
     </section>
@@ -441,34 +848,34 @@
     <!-- Deep-dive Spotlight: Temizale -->
     <section class="wrap section" id="temizale" style="border-top:1px solid var(--line);">
       <div class="section-heading">
-        <p class="eyebrow">SPOTLIGHT: TEMİZALE</p>
-        <h2>Restore your Mac to peak performance.</h2>
-        <p>Safely purge bloated caches, logs, trash remnants, and application leftovers with a single click.</p>
+        <p class="eyebrow">SPOTLIGHT: TEMIZALE</p>
+        <h2>Reclaim your computer's speed and storage.</h2>
+        <p>Safely clear obsolete caches, log files, trash remnants, and uninstalled application leftovers in one click.</p>
       </div>
 
       <div class="features">
         <article>
           <span class="number">01</span>
-          <h3>Deep Cache Sweeper.</h3>
-          <p>Audits system and user cache directories to reclaim gigabytes of storage safely.</p>
-          <span class="tag">Cache Cleaning</span>
+          <h3>Deep Cache Scanning.</h3>
+          <p>Scans system and user cache directories to safely reclaim gigabytes of bloated storage.</p>
+          <span class="tag">Cache Clean</span>
         </article>
         <article>
           <span class="number">02</span>
-          <h3>Thorough App Uninstaller.</h3>
-          <p>Discovers lingering files in Library and Application Support left behind by deleted applications.</p>
-          <span class="tag">Leftover Scrubber</span>
+          <h3>Complete App Uninstallation.</h3>
+          <p>Locates residual files left in system folders by deleted apps and completely purges them.</p>
+          <span class="tag">Leftover Clean</span>
         </article>
         <article>
           <span class="number">03</span>
-          <h3>Smart Trash Management.</h3>
-          <p>Overcomes file lockouts to securely empty stubborn trash bins and restore file-system agility.</p>
-          <span class="tag">Trash Purge</span>
+          <h3>Intelligent Trash Emptying.</h3>
+          <p>Forces stubborn locked or un-deletable trash files to empty safely, boosting performance.</p>
+          <span class="tag">Trash Clean</span>
         </article>
       </div>
 
       <div class="actions" style="margin-top:40px;">
-        <a class="button" href="https://github.com/themanoftalent/Temizale/releases/download/v2.2.0/Temizale-2.2.0.dmg">Download Temizale Universal DMG (v2.2.0) <span>↓</span></a>
+        <a class="button" href="https://github.com/themanoftalent/Temizale/releases/download/v2.2.0/Temizale-2.2.0.dmg">Download Universal DMG (v2.2.0) <span>↓</span></a>
         <a class="text-link" href="https://github.com/themanoftalent/Temizale" target="_blank" rel="noopener">Temizale GitHub Repository ↗</a>
       </div>
     </section>
@@ -476,9 +883,9 @@
     <!-- Community / Creator Section -->
     <section class="community">
       <div class="wrap">
-        <p class="eyebrow">INDEPENDENT & OPEN SOURCE</p>
-        <h2>Follow the journey.<br>Star the repositories.</h2>
-        <p>The macOS Uygulama ecosystem is created, curated, and maintained by Mehmet Akif Çifçi (@themanoftalent).</p>
+        <p class="eyebrow">INDEPENDENT OPEN-SOURCE DEVELOPMENT</p>
+        <h2>Follow my journey.<br>Explore the apps.</h2>
+        <p>The desktop software suite is designed, crafted, and actively maintained by Mehmet Akif Çifçi (@themanoftalent).</p>
         <div class="actions">
           <a class="button" href="https://github.com/themanoftalent" target="_blank" rel="noopener">Follow @themanoftalent ↗</a>
           <a class="button outline" href="https://github.com/themanoftalent/macosuygulama" target="_blank" rel="noopener">Star This Portal ↗</a>
@@ -489,9 +896,9 @@
 
   <footer class="wrap">
     <a class="brand" href="/">
-      macOS Uygulama<span>NATIVE MACOS ECOSYSTEM</span>
+      macOS & Windows Apps<span>INDEPENDENT DESKTOP ECOSYSTEM</span>
     </a>
-    <p>Created by Mehmet Akif Çifçi (@themanoftalent). All rights reserved.<br>Open-source native macOS software hub.</p>
+    <p>Author & Developer: Mehmet Akif Çifçi (@themanoftalent). All rights reserved.<br>Open-source native desktop software platform.</p>
     <a href="https://github.com/themanoftalent" target="_blank" rel="noopener">GitHub Profile ↗</a>
   </footer>
 </body>

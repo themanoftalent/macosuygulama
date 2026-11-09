@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="macOS Uygulama: Mehmet Akif Çifçi tarafından geliştirilen açık kaynaklı, yerel ve yüksek performanslı macOS uygulamaları koleksiyonu. AlePdf, Temizale, Miknatizale, RecordAle ve daha fazlası.">
-  <title>macOS Uygulama — Yerel, Hızlı ve Açık Kaynaklı macOS Uygulamaları</title>
+  <meta name="description" content="macOS ve Windows Uygulamaları: Mehmet Akif Çifçi tarafından geliştirilen açık kaynaklı, yerel ve yüksek performanslı masaüstü uygulamaları koleksiyonu. AlePdf, Temizale, Miknatizale, RecordAle ve daha fazlası.">
+  <title>macOS & Windows Uygulamaları — Yerel, Hızlı ve Açık Kaynaklı Masaüstü Yazılımları</title>
   <link rel="icon" href="/assets/cat-icon.png" type="image/png">
   <link rel="stylesheet" href="/style.css">
   <script src="/locale.js" defer></script>
@@ -14,14 +14,15 @@
   <a class="skip" href="#main">İçeriğe geç</a>
 
   <header>
-    <a class="brand" href="/tr/" aria-label="macOS Uygulama Ana Sayfa">
+    <a class="brand" href="/tr/" aria-label="Masaüstü Uygulamaları Ana Sayfa">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:4px;">
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.13.65-2.79 1.43-.58.67-1.09 1.76-1.03 2.82 1.07.08 2.18-.55 2.81-1.38z"/>
       </svg>
-      macOS Uygulama<span>YEREL UYGULAMA PAKETİ</span>
+      macOS & Windows Uygulama<span>YEREL UYGULAMA PAKETİ</span>
     </a>
     <nav aria-label="Ana Menü">
-      <a href="#apps">Uygulamalar</a>
+      <a href="#apps" class="os-tab-btn" data-target-os="macos">macOS</a>
+      <a href="#apps" class="os-tab-btn" data-target-os="windows">Windows</a>
       <a href="#alepdf">AlePdf</a>
       <a href="#temizale">Temizale</a>
       <a href="#ilkeler">İlkeler</a>
@@ -38,13 +39,13 @@
     <section class="hero wrap">
       <div class="hero-copy">
         <p class="eyebrow"><span class="dot"></span> YEREL MİMARİ · ÖNCE YEREL · %100 GİZLİLİK</p>
-        <h1>macOS için bağımsız,<br>yerel ve güçlü <em>araçlar.</em></h1>
-        <p class="lead">Gelişmiş PDF düzenlemeden derinlemesine sistem temizliğine, akıllı pencere hizalamadan profesyonel ekran kaydına kadar: Swift ve Rust ile en yüksek hızda çalışan açık kaynaklı yerel macOS uygulamaları.</p>
+        <h1>macOS ve Windows için<br>yerel ve güçlü <em>araçlar.</em></h1>
+        <p class="lead">Gelişmiş PDF düzenlemeden derinlemesine sistem temizliğine, akıllı pencere hizalamadan masaüstü düzenine ve profesyonel ekran kaydına kadar: Swift ve Rust ile en yüksek hızda çalışan açık kaynaklı yerel masaüstü uygulamaları.</p>
         <div class="actions">
-          <a class="button" href="#apps">Tüm Uygulamaları Keşfet <span>↓</span></a>
+          <a class="button" href="#apps">Uygulamaları Keşfet <span>↓</span></a>
           <a class="text-link" href="https://github.com/themanoftalent" target="_blank" rel="noopener">GitHub Profilim (@themanoftalent) ↗</a>
         </div>
-        <p class="micro">Apple Silicon (M1/M2/M3/M4) & Universal · Açık Kaynaklı Ekosistem</p>
+        <p class="micro">macOS (Apple Silicon & Universal) · Windows 10 & 11 (64-bit) · Açık Kaynak</p>
         <div class="hero-note">
           <span>01 / MASAÜSTÜNÜZ İÇİN TASARLANDI</span>
           <p>Tüm verileriniz cihazınızda kalır.<br>Zorunlu hesap veya abonelik yok.</p>
@@ -52,20 +53,20 @@
       </div>
       <figure class="hero-art">
         <div class="image-label">
-          <span>ÖNE ÇIKAN UYGULAMA</span>
+          <span>ÇAPRAZ PLATFORM</span>
           <span>ALEPDF WORKSPACE</span>
         </div>
         <img src="/assets/alepdf-editor.png" alt="AlePdf masaüstü PDF çalışma alanı" width="960" height="1003" fetchpriority="high">
-        <figcaption>AlePdf — macOS için yerel PDF düzenleme ve açıklama araçları</figcaption>
+        <figcaption>AlePdf — macOS ve Windows 10/11 için yerel PDF düzenleme ve açıklama araçları</figcaption>
       </figure>
     </section>
 
     <!-- Info Strip -->
     <div class="strip">
       <div class="wrap">
-        <span>⚡ 10+ Yerel macOS Uygulaması</span>
+        <span>⚡ 11+ Yerel Masaüstü Aracı</span>
+        <span>🍏 macOS & 🪟 Windows Desteği</span>
         <span>🔒 %100 Yerel Dosya Güvenliği</span>
-        <span>🌐 Apple Silicon & Universal</span>
         <span>💻 GitHub’da Açık Kaynak</span>
       </div>
     </div>
@@ -75,280 +76,687 @@
       <div class="section-heading">
         <p class="eyebrow">UYGULAMA KOLEKSİYONU</p>
         <h2>Her iş için özel bir yerel araç.</h2>
-        <p>Mehmet Akif Çifçi (@themanoftalent) tarafından geliştirilen ve sürekli güncellenen bağımsız masaüstü uygulamaları.</p>
+        <p>Mehmet Akif Çifçi (@themanoftalent) tarafından geliştirilen ve sürekli güncellenen bağımsız masaüstü yazılımları.</p>
       </div>
 
-      <!-- Filter Buttons -->
-      <div class="filter-bar" role="toolbar" aria-label="Kategori Filtreleri">
-        <button class="filter-btn active" data-filter="all">Tümü (10)</button>
-        <button class="filter-btn" data-filter="docs">Belge & PDF</button>
-        <button class="filter-btn" data-filter="system">Sistem & Temizlik</button>
-        <button class="filter-btn" data-filter="productivity">Pencere & Verimlilik</button>
-        <button class="filter-btn" data-filter="media">Ekran & Video</button>
-        <button class="filter-btn" data-filter="menubar">Menü Çubuğu</button>
+      <!-- OS Switcher Bar -->
+      <div class="os-switcher-wrap">
+        <div class="os-tabs-nav" role="tablist" aria-label="İşletim Sistemi Seçimi">
+          <button class="os-tab-btn active" id="tab-macos" data-target-os="macos" role="tab" aria-selected="true" aria-controls="macos-showcase">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.13.65-2.79 1.43-.58.67-1.09 1.76-1.03 2.82 1.07.08 2.18-.55 2.81-1.38z"/></svg>
+            macOS Uygulamaları <span class="os-tab-badge">11 Uygulama</span>
+          </button>
+          <button class="os-tab-btn" id="tab-windows" data-target-os="windows" role="tab" aria-selected="false" aria-controls="windows-showcase">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.45l7.35-1v7.1H3V5.45zm0 13.1l7.35 1v-7.1H3v6.1zm8.35 1.13L21 21.3V11.55H11.35v8.13zm0-15.36v8.13H21V2.7l-9.65 1.62z"/></svg>
+            Windows Uygulamaları <span class="os-tab-badge">AlePDF Yayında</span>
+          </button>
+        </div>
       </div>
 
-      <!-- Apps Grid -->
-      <div class="apps-grid">
-        <!-- 1. AlePdf -->
-        <article class="app-card" data-category="docs productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/alepdf.png" alt="AlePdf Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Belge & PDF Stüdyosu</span>
-              <h3>AlePdf</h3>
-            </div>
-          </div>
-          <p class="app-tagline">Yerel, ultra hızlı ve tam donanımlı PDF çalışma alanı.</p>
-          <p class="app-desc">Doğrudan metin ve görsel düzenleme, sayfa sırası organize etme, form doldurma, güvenli imzalama ve çizim araçları. Web tarayıcısı gerektirmez, tamamen yerel çalışır.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Rust</span>
-            <span class="tech-tag">Local-First</span>
-            <span class="tech-tag">Apple Silicon</span>
-            <span class="tech-tag">Windows x64</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">DMG İndir (v0.18.2)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">GitHub ↗</a>
-            <a class="btn-secondary" href="#alepdf">Detaylar ↓</a>
-          </div>
-        </article>
+      <!-- ==================== macOS SHOWCASE ==================== -->
+      <div id="macos-showcase" class="os-showcase-panel">
+        <!-- Category Filter Buttons for macOS -->
+        <div class="filter-bar" role="toolbar" aria-label="macOS Kategori Filtreleri">
+          <button class="filter-btn active" data-filter="all">Tümü (11)</button>
+          <button class="filter-btn" data-filter="docs">Belge & PDF</button>
+          <button class="filter-btn" data-filter="system">Sistem & Temizlik</button>
+          <button class="filter-btn" data-filter="productivity">Pencere & Masaüstü</button>
+          <button class="filter-btn" data-filter="media">Ekran & Video</button>
+          <button class="filter-btn" data-filter="menubar">Menü Çubuğu</button>
+        </div>
 
-        <!-- 2. Temizale -->
-        <article class="app-card" data-category="system">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/temizale.png" alt="Temizale Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Sistem & Temizlik</span>
-              <h3>Temizale</h3>
+        <!-- macOS Apps Grid -->
+        <div class="apps-grid">
+          <!-- 1. AlePdf -->
+          <article class="app-card" data-category="docs productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alepdf.png" alt="AlePdf Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Belge & PDF Stüdyosu</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>AlePdf</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Modern, güvenli ve hafif macOS sistem temizleyici & kaldırıcı.</p>
-          <p class="app-desc">Kullanıcı ve sistem önbelleklerini temizleyin, kaldırılan uygulamaların artık dosyalarını bulun ve gereksiz çöpleri güvenle silerek disk alanınızı geri kazanın.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">SwiftUI</span>
-            <span class="tech-tag">Universal (ARM64/x86_64)</span>
-            <span class="tech-tag">macOS 14+</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/Temizale/releases/download/v2.2.0/Temizale-2.2.0.dmg">DMG İndir (v2.2.0)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/Temizale" target="_blank" rel="noopener">GitHub ↗</a>
-            <a class="btn-secondary" href="#temizale">Detaylar ↓</a>
-          </div>
-        </article>
+            <p class="app-tagline">Yerel, ultra hızlı ve tam donanımlı PDF çalışma alanı.</p>
+            <p class="app-desc">Doğrudan metin ve görsel düzenleme, sayfa sırası organize etme, form doldurma, güvenli imzalama ve çizim araçları. Web tarayıcısı gerektirmez, tamamen yerel çalışır.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Local-First</span>
+              <span class="tech-tag">Apple Silicon</span>
+              <span class="tech-tag">v0.18.2</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">DMG İndir (v0.18.2)</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="btn-secondary" href="#alepdf">Detaylar ↓</a>
+            </div>
+          </article>
 
-        <!-- 3. Miknatizale -->
-        <article class="app-card" data-category="productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/miknatizale.png" alt="Miknatizale Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Pencere & Ekran Bölme</span>
-              <h3>Miknatizale</h3>
+          <!-- 2. Temizale -->
+          <article class="app-card" data-category="system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/temizale.png" alt="Temizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Sistem & Temizlik</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Temizale</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Piksel mükemmelliğinde pencere hizalama ve ekran bölme yöneticisi.</p>
-          <p class="app-desc">Ekranınızı klavye kısayolları ve kenara sürükleme hareketleriyle ikiye, üçe veya dörde bölün. Magnet deneyiminin yerel Swift & SwiftUI açık kaynak karşılığı.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">AppKit</span>
-            <span class="tech-tag">Çoklu Monitör</span>
-            <span class="tech-tag">Sıfır Gecikme</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">Projeyi İncele ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Modern, güvenli ve hafif macOS sistem temizleyici & kaldırıcı.</p>
+            <p class="app-desc">Kullanıcı ve sistem önbelleklerini temizleyin, kaldırılan uygulamaların artık dosyalarını bulun ve gereksiz çöpleri güvenle silerek disk alanınızı geri kazanın.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">SwiftUI</span>
+              <span class="tech-tag">Universal</span>
+              <span class="tech-tag">v2.2.0</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/Temizale/releases/download/v2.2.0/Temizale-2.2.0.dmg">DMG İndir (v2.2.0)</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Temizale" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="btn-secondary" href="#temizale">Detaylar ↓</a>
+            </div>
+          </article>
 
-        <!-- 4. RecordAle -->
-        <article class="app-card" data-category="media">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/recordale.png" alt="RecordAle Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Ekran & Video Stüdyosu</span>
-              <h3>RecordAle</h3>
+          <!-- 3. DesktopDüzen -->
+          <article class="app-card" data-category="productivity desktop menubar">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/desktopduzen.png" alt="DesktopDüzen İkonu">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Masaüstü Düzenleyici</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>DesktopDüzen</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Stüdyo kalitesinde ürün demo ve eğitim videoları oluşturun.</p>
-          <p class="app-desc">Dinamik otomatik yakınlaştırma (auto-zoom), pürüzsüz imleç takibi, stüdyo çerçeveleri ve özelleştirilebilir arka planlarla dakikalar içinde profesyonel walkthrough videoları kaydedin.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Native Motion</span>
-            <span class="tech-tag">High FPS</span>
-            <span class="tech-tag">Webcam Bubble</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">Projeyi İncele ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Mac masaüstünüzü duvar kağıdınıza sabitlenmiş etkileşimli ve özelleştirilebilir bölgelerle düzenleyin.</p>
+            <p class="app-desc">DesktopDüzen, Stardock Fences tarzı masaüstü düzenleme deneyimini yerel macOS performansı ile sunar. Dağınık masaüstü dosyalarını anlık klasörlere bağlı Dosya Bölgelerinde toplayın, 27 tema ve sıvı cam şeffaflığıyla masaüstünüzü düzenleyin.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift</span>
+              <span class="tech-tag">AppKit & SwiftUI</span>
+              <span class="tech-tag">Menü Çubuğu</span>
+              <span class="tech-tag">v1.1.0</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/macosuygulama/raw/main/apps/DesktopDuzen/DesktopDuzen.dmg">DMG İndir (v1.1.0)</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/macosuygulama/tree/main/apps/DesktopDuzen" target="_blank" rel="noopener">Kaynak Kodu ↗</a>
+            </div>
+          </article>
 
-        <!-- 5. Foldale -->
-        <article class="app-card" data-category="docs productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/foldale.png" alt="Foldale Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Çift Panelli Dosya Yöneticisi</span>
-              <h3>Foldale</h3>
+          <!-- 4. Miknatizale -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/miknatizale.png" alt="Miknatizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Pencere & Ekran Bölme</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Miknatizale</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Marta ve Windows Gezgini gücünde modern dosya yöneticisi.</p>
-          <p class="app-desc">Çift panel (dual-pane) çalışma alanı, klavye odaklı hızlı gezinme, yerleşik arşivleme ve asenkron Rust dosya aktarım motoru ile benzersiz dosya yönetimi deneyimi.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Rust Motoru</span>
-            <span class="tech-tag">Dual-Pane</span>
-            <span class="tech-tag">Klavye Odaklı</span>
-            <span class="tech-tag">Çoklu Sekme</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">Projeyi İncele ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Piksel mükemmelliğinde pencere hizalama ve ekran bölme yöneticisi.</p>
+            <p class="app-desc">Ekranınızı klavye kısayolları ve kenara sürükleme hareketleriyle ikiye, üçe veya dörde bölün. Magnet deneyiminin yerel Swift açık kaynak karşılığı.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">AppKit</span>
+              <span class="tech-tag">Çoklu Monitör</span>
+              <span class="tech-tag">Sıfır Gecikme</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 6. Saklamac Pro -->
-        <article class="app-card" data-category="system menubar">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/saklamac.png" alt="Saklamac Pro Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Menü Çubuğu Yöneticisi</span>
-              <h3>Saklamac Pro</h3>
+          <!-- 5. RecordAle -->
+          <article class="app-card" data-category="media">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/recordale.png" alt="RecordAle Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Ekran & Video Stüdyosu</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>RecordAle</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">MacBook çentik (notch) dostu akıllı menü çubuğu düzenleyicisi.</p>
-          <p class="app-desc">Kalabalık menü çubuğu simgelerini gizleyin, kayan raf (overflow shelf) ile düzenleyin ve Spotlight tarzı hızlı arama ile tüm araçlarınıza tek kısayolla ulaşın.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">Notch Uyumlu</span>
-            <span class="tech-tag">Spotlight Arama</span>
-            <span class="tech-tag">Profil Desteği</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">Projeyi İncele ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Stüdyo kalitesinde ürün demo ve eğitim videoları oluşturun.</p>
+            <p class="app-desc">Dinamik otomatik yakınlaştırma (auto-zoom), pürüzsüz imleç takibi, stüdyo çerçeveleri ve özelleştirilebilir arka planlarla dakikalar içinde profesyonel walkthrough videoları kaydedin.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Native Motion</span>
+              <span class="tech-tag">High FPS</span>
+              <span class="tech-tag">Webcam Bubble</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 7. AleClip -->
-        <article class="app-card" data-category="productivity menubar">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/aleclip.png" alt="AleClip Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Pano Geçmişi & Verimlilik</span>
-              <h3>AleClip</h3>
+          <!-- 6. Foldale -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/foldale.png" alt="Foldale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Dosya Yöneticisi</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Foldale</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Hafif, yerel ve gizlilik odaklı modern pano yöneticisi — Mac ve iOS arasında otomatik eşitleme ile.</p>
-          <p class="app-desc">Kopyaladığınız metinleri, görselleri, renk kodlarını ve bağlantıları arayın ve tek tuşla dilediğiniz yere yapıştırın. Onay korumalı Tümünü Sil veya çoklu seçimle panonuzu temizleyin, kopyalarınızı Google Drive'da saklayın ve silinenler dahil Mac ile iPhone/iPad arasında gerçek zamanlı çift yönlü eşitlemenin keyfini çıkarın. Telemetri yok, AleClip sunucusu yok.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">macOS · iOS · Android</span>
-            <span class="tech-tag">Canlı Drive Eşitleme</span>
-            <span class="tech-tag">TestFlight Hazır</span>
-            <span class="tech-tag">Gizlilik Odaklı</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/aleclip/releases/download/v2.2.0/AleClip-2.2.0.dmg">DMG İndir (v2.2.0)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/aleclip" target="_blank" rel="noopener">Mac GitHub ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/aleclip-ios" target="_blank" rel="noopener">iOS (TestFlight) ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/aleclip-android" target="_blank" rel="noopener">Android ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Klavye odaklı, çift panelli ve şimşek hızında dosya yöneticisi.</p>
+            <p class="app-desc">Geliştiriciler ve ileri düzey kullanıcılar için tasarlanan modern Commander alternatifi. Rust tabanlı mimarisiyle binlerce dosyayı anında indeksler ve taşır.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Dual-Pane</span>
+              <span class="tech-tag">Vim Keys</span>
+              <span class="tech-tag">Ultra Fast</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 8. AleCal -->
-        <article class="app-card" data-category="menubar productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/alecal.png" alt="AleCal Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Menü Çubuğu Takvimi</span>
-              <h3>AleCal v2.0</h3>
+          <!-- 7. Saklamac Pro -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/saklamac.png" alt="Saklamac Pro Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Menü Çubuğu Yöneticisi</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>Saklamac Pro</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Zarif cam tasarımlı menü çubuğu takvimi ve toplantı yöneticisi.</p>
-          <p class="app-desc">Google Meet, Zoom ve Teams toplantılarına tek tıkla katılın. Canlı durum rozetleri, takvim renkleri ve hızlı etkinlik planlama desteğiyle gününüzü kolaylaştırın.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">SwiftUI</span>
-            <span class="tech-tag">Glassmorphism</span>
-            <span class="tech-tag">Tek Tık Toplantı</span>
-            <span class="tech-tag">Canlı Rozetler</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">Projeyi İncele ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Kalabalık menü çubuğu ikonlarını akıllıca gizleyin ve yönetin.</p>
+            <p class="app-desc">MacBook çentikli ekranları için optimize edilmiş durum çubuğu düzenleyicisi. Arka plan uygulamalarını düzenli tutun, menü çubuğunuzu temizleyin.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">SwiftUI</span>
+              <span class="tech-tag">Notch-Safe</span>
+              <span class="tech-tag">MenuBar</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 9. AleBar -->
-        <article class="app-card" data-category="menubar system">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/alebar.png" alt="AleBar Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Menü Çubuğu Kişiselleştirme</span>
-              <h3>AleBar</h3>
+          <!-- 8. AleClip -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aleclip.png" alt="AleClip Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Pano & Hafıza Yöneticisi</span>
+                  <span class="os-badge macos">macOS & iOS</span>
+                </div>
+                <h3>AleClip</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Menü çubuğunuzun kontrolünü tamamen elinize alın.</p>
-          <p class="app-desc">Durum çubuğunuzu temiz ve düzenli tutun. Koşullu tetikleyicilerle simgeleri otomatik gizleyin, klavye komut paletini kullanın ve stil motorunu deneyimleyin.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift 6</span>
-            <span class="tech-tag">Komut Paleti</span>
-            <span class="tech-tag">Koşullu Gösterim</span>
-            <span class="tech-tag">Stil Motoru</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">Projeyi İncele ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Kayıpsız, güvenli ve şifreli pano geçmişi yöneticisi.</p>
+            <p class="app-desc">Kopyaladığınız metinleri, zengin kod bloklarını, linkleri ve görselleri yerel şifrelenmiş veritabanında saklar. Google Drive senkronizasyonu ve iOS TestFlight uygulaması içerir.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">AppKit</span>
+              <span class="tech-tag">Şifreli Depolama</span>
+              <span class="tech-tag">Google Drive Sync</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/AleClip" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleClip" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 10. AleDesk -->
-        <article class="app-card" data-category="productivity">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/aledesk.png" alt="AleDesk Icon">
-            <div class="app-title-group">
-              <span class="app-cat">Uzaktan Masaüstü Bağlantısı</span>
-              <h3>AleDesk</h3>
+          <!-- 9. AleCal -->
+          <article class="app-card" data-category="menubar productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alecal.png" alt="AleCal Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Menü Çubuğu Takvimi</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>AleCal</h3>
+              </div>
             </div>
-          </div>
-          <p class="app-tagline">Ultra düşük gecikmeli, güvenli ve hafif uzaktan erişim.</p>
-          <p class="app-desc">Kendi donanımınız üzerinden güvenli uzaktan masaüstü kontrolü ve dosya aktarımı sağlayın. Karmaşık sunucu kurulumu gerektirmeyen pratik yapı.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Rust & C++</span>
-            <span class="tech-tag">P2P Şifreleme</span>
-            <span class="tech-tag">Düşük Gecikme</span>
-            <span class="tech-tag">Dosya Aktarımı</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">Projeyi İncele ↗</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
+            <p class="app-tagline">Menü çubuğunuzda tek tıkla açılan zarif mini takvim.</p>
+            <p class="app-desc">macOS Takvim ve Hatırlatıcılar ile tam entegre mini takvim aracı. Şeffaf cam efekti, hafta numaraları ve hızlı etkinlik genel bakışı sunar.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">SwiftUI</span>
+              <span class="tech-tag">EventKit</span>
+              <span class="tech-tag">Glassmorphic</span>
+              <span class="tech-tag">MenuBar</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
 
-        <!-- 10. DesktopDüzen -->
-        <article class="app-card" data-category="productivity desktop">
-          <div class="app-top">
-            <img class="app-icon" src="/assets/apps/desktopduzen.png" alt="DesktopDüzen İkonu">
-            <div class="app-title-group">
-              <span class="app-cat">Masaüstü Düzenleyici</span>
-              <h3>DesktopDüzen</h3>
+          <!-- 10. AleBar -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alebar.png" alt="AleBar Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Menü Çubuğu Özelleştirici</span>
+                  <span class="os-badge macos">macOS</span>
+                </div>
+                <h3>AleBar</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Menü çubuğunuzu bölümlere ayırın ve kişiselleştirin.</p>
+            <p class="app-desc">Menü çubuğuna özel ayırıcılar, gölgeler, özel simgeler ve estetik dokunuşlar ekleyerek çalışma alanınızı kişiselleştirmenizi sağlar.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Swift 6</span>
+              <span class="tech-tag">CoreGraphics</span>
+              <span class="tech-tag">Özelleştirilebilir</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- 11. AleDesk -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aledesk.png" alt="AleDesk Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                  <span class="app-cat">Uzak Masaüstü İstemcisi</span>
+                  <span class="os-badge macos">macOS & Windows</span>
+                </div>
+                <h3>AleDesk</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Ultra düşük gecikmeli, güvenli ve hafif uzaktan erişim.</p>
+            <p class="app-desc">Kendi donanımınız üzerinden güvenli uzaktan masaüstü kontrolü ve dosya aktarımı sağlayın. P2P şifreleme ve düşük gecikmeli mimari.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust & C++</span>
+              <span class="tech-tag">P2P Şifreleme</span>
+              <span class="tech-tag">Düşük Gecikme</span>
+              <span class="tech-tag">Dosya Aktarımı</span>
+            </div>
+            <div class="app-card-actions">
+              <a class="btn-primary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">Projeyi İncele ↗</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ==================== Windows SHOWCASE ==================== -->
+      <div id="windows-showcase" class="os-showcase-panel hidden-view">
+        <!-- Windows Featured Announcement -->
+        <div class="windows-featured-banner">
+          <div>
+            <span class="os-badge windows">Windows 10 ve Windows 11 (64-bit)</span>
+            <h3 style="font-size:18px; margin:6px 0 3px; color:var(--ink);">AlePDF Windows Sürümü Yayında ve Kullanıma Hazır</h3>
+            <p style="margin:0; font-size:13px; color:var(--muted); line-height:1.5;">Doğrudan çalışan 64-bit Inno Setup kurulum paketi, taşınabilir (Portable) ZIP arşivi ve SHA-256 doğrulama özetiyle güvenle indirin.</p>
+          </div>
+          <a href="#windows-security" class="btn-secondary" style="font-size:12px;">Güvenli Kurulum & Doğrulama Rehberi ↓</a>
+        </div>
+
+        <!-- Windows Apps Grid -->
+        <div class="apps-grid">
+          <!-- 1. AlePdf (Windows x64 - Fully Working & Live) -->
+          <article class="app-card featured-windows" data-category="docs productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alepdf.png" alt="AlePdf Windows Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows 10 & 11 (x64)</span>
+                  <span class="status-badge live">● Canlı & İndirilebilir</span>
+                  <span class="version-pill">v0.15.0</span>
+                </div>
+                <h3>AlePdf for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Yerel, ultra hızlı ve tam donanımlı Windows PDF çalışma alanı.</p>
+            <p class="app-desc">Doğrudan yerel Rust motoru ve egui arayüzü ile derlenmiş bağımsız Windows masaüstü uygulaması. Webview veya tarayıcı bağımlılığı yoktur, GPU hızlandırmalı wgpu mimarisiyle sıfır gecikmeli çalışır. Sayfa düzenleme, yerinde metin ve görsel düzenleme, form doldurma, güvenli imzalama ve çizim araçları sunar.</p>
+            
+            <div class="tech-tags">
+              <span class="tech-tag">Rust 2024</span>
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Inno Setup</span>
+              <span class="tech-tag">Local-First</span>
+              <span class="tech-tag">Sıfır Telemetri</span>
+              <span class="tech-tag">Düşük Yetki (Lowest)</span>
+            </div>
+
+            <!-- Direct Windows Downloads -->
+            <div class="windows-downloads-group">
+              <div class="windows-download-title">
+                <span>📦 Windows Dağıtım Paketleri</span>
+                <span style="font-size:11px;font-weight:600;color:#285640;">Windows 10 / 11 Uyumlu</span>
+              </div>
+              <div class="windows-download-buttons">
+                <a class="btn-primary" href="https://github.com/themanoftalent/alepdf/releases/download/alepdf-windows-preview-8/AlePdf-0.15.0-windows-x64-setup.exe" download>
+                  ⬇ AlePDF-Setup-x64.exe İndir (74.6 MB)
+                </a>
+                <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf/releases/download/alepdf-windows-preview-8/AlePdf-0.15.0-windows-x64-portable.zip" download>
+                  📦 Taşınabilir ZIP (Portable)
+                </a>
+                <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf/releases/tag/alepdf-windows-preview-8" target="_blank" rel="noopener">
+                  Sürüm Notları ↗
+                </a>
+              </div>
+
+              <!-- SHA-256 Checksum Container -->
+              <div class="hash-container">
+                <div>
+                  <span class="hash-label">AlePdf-Setup-x64.exe SHA-256 Özeti:</span>
+                  <span class="hash-val">5ef1c9eaabc9cc921d17a0c914480d82fc1b7ec2ead3d2664bb0ddfbb8754369</span>
+                </div>
+                <button class="copy-hash-btn" data-hash="5ef1c9eaabc9cc921d17a0c914480d82fc1b7ec2ead3d2664bb0ddfbb8754369" data-copied-text="Kopyalandı!">Kopyala</button>
+              </div>
+            </div>
+
+            <div class="app-card-actions">
+              <a class="btn-secondary" href="#windows-security">Güvenlik & Kurulum Kılavuzu ↓</a>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">Kaynak Deposu ↗</a>
+            </div>
+          </article>
+
+          <!-- 2. DesktopDüzen (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity desktop">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/desktopduzen.png" alt="DesktopDüzen Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>DesktopDüzen for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Windows Masaüstü Bölge ve Klasör Düzenleyici.</p>
+            <p class="app-desc">Windows masaüstünüzde duvar kâğıdınıza sabitlenmiş özelleştirilebilir dosya, klasör ve uygulama bölgeleri oluşturan Fences tarzı modern masaüstü düzenleyici.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Masaüstü Katmanı</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/macosuygulama/tree/main/apps/DesktopDuzen" target="_blank" rel="noopener">Kaynak Kodu ↗</a>
+            </div>
+          </article>
+
+          <!-- 3. Temizale (Windows - Coming Soon) -->
+          <article class="app-card" data-category="system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/temizale.png" alt="Temizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>Temizale for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Windows Sistem ve Geçici Dosya Temizleyici.</p>
+            <p class="app-desc">Windows geçici klasörleri (%TEMP%), uygulama önbellekleri, döküm (dump) kalıntıları ve sistem çöplerini derinlemesine tarayıp temizleyen yerel Windows sürümü geliştirilmektedir.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Disk Optimizer</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Temizale" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 4. Miknatizale (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/miknatizale.png" alt="Miknatizale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>Miknatizale for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Hafif ve Hızlı Windows Pencere Hizalama & Ekran Bölme.</p>
+            <p class="app-desc">Windows Snap Assist deneyimini klavye odaklı, ultra hafif ve özelleştirilebilir kısayollarla geliştiren Windows pencere yöneticisi sürümü planlanmaktadır.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Pencere Yönetimi</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Miknatizale" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 5. RecordAle (Windows - Coming Soon) -->
+          <article class="app-card" data-category="media">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/recordale.png" alt="RecordAle Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>RecordAle for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Stüdyo Kalitesinde Windows Ekran Kaydedici.</p>
+            <p class="app-desc">Windows üzerinde otomatik yakınlaştırma (auto-zoom), stüdyo çerçeveleri ve web kamerası entegrasyonuyla demo ve eğitim videosu kaydetme stüdyosu.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Ekran Kaydı</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/RecordAle" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 6. Foldale (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/foldale.png" alt="Foldale Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>Foldale for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Çift Panelli ve Hızlı Dosya Yöneticisi.</p>
+            <p class="app-desc">Rust mimarisiyle geliştirilen klavye odaklı, çift panelli ve sekmeli Windows dosya yöneticisi sürümü hazırlanmaktadır.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Çift Panel</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/foldale" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 7. Saklamac Pro (Windows - Coming Soon) -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/saklamac.png" alt="Saklamac Pro Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>Saklamac for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Windows Sistem Tepsisi (System Tray) İkon Yöneticisi.</p>
+            <p class="app-desc">Windows görev çubuğu ve sistem tepsisindeki kalabalık arka plan simgelerini sadeleştiren ve tek tıkla gizleyip gösteren tepsi düzenleyici.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">System Tray</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/saklamac" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 8. AleClip (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aleclip.png" alt="AleClip Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>AleClip for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Şifreli Windows Pano Geçmişi & Senkronizasyon.</p>
+            <p class="app-desc">Kopyalanan metin ve görselleri yerel şifreli SQLite veritabanında saklayan, Google Drive üzerinden macOS ve iOS ile çift yönlü eşitlenen Windows pano aracı.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Şifreli SQLite</span>
+              <span class="tech-tag">Cloud Sync</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleClip" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 9. AleCal (Windows - Coming Soon) -->
+          <article class="app-card" data-category="menubar productivity">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alecal.png" alt="AleCal Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>AleCal for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Görev Çubuğu Hızlı Takvim & Etkinlik Görüntüleyici.</p>
+            <p class="app-desc">Windows görev çubuğunda tek tıkla açılan, yerel takvim ve etkinlikleri gösteren minimalist cam efektli takvim aracı.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Görev Çubuğu</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleCal" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 10. AleBar (Windows - Coming Soon) -->
+          <article class="app-card" data-category="menubar system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/alebar.png" alt="AleBar Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>AleBar for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Görev Çubuğu Araç & Bilgi İstasyonu.</p>
+            <p class="app-desc">CPU, bellek ve ağ kullanımını Windows görev çubuğunda canlı izleme araçları sunan hafif sistem yardımcısı.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Donanım Monitörü</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/Ale_Bar" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+
+          <!-- 11. AleDesk (Windows - Coming Soon) -->
+          <article class="app-card" data-category="productivity system">
+            <div class="app-top">
+              <img class="app-icon" src="/assets/apps/aledesk.png" alt="AleDesk Icon">
+              <div class="app-title-group">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span class="os-badge windows">Windows</span>
+                  <span class="status-badge coming-soon">⏳ Yakında</span>
+                </div>
+                <h3>AleDesk for Windows</h3>
+              </div>
+            </div>
+            <p class="app-tagline">Ultra Düşük Gecikmeli Uzak Masaüstü İstemcisi.</p>
+            <p class="app-desc">Rust ve C++ temelinde yüksek kare hızlı, güvenli uçtan uca şifreli uzak masaüstü ve kontrol istemcisi.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Windows x64</span>
+              <span class="tech-tag">Geliştirme Aşamasında</span>
+            </div>
+            <div class="app-card-actions">
+              <span class="btn-disabled">Windows Sürümü Yakında</span>
+              <a class="btn-secondary" href="https://github.com/themanoftalent/AleDesk" target="_blank" rel="noopener">GitHub’da Takip Et ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Windows Güvenli Kurulum & Doğrulama Rehberi -->
+        <div class="windows-security-wrap" id="windows-security">
+          <div class="windows-security-header">
+            <h3>🛡️ Windows Güvenli Kurulum & Doğrulama Kılavuzu</h3>
+            <p>Windows kullanıcılarının uygulamayı güvenli, şeffaf ve Microsoft standartlarına uygun biçimde yükleyebilmesi için hazırlanan resmi yönergeler.</p>
+          </div>
+
+          <div class="security-grid">
+            <!-- Step 1: Verification -->
+            <div class="security-step">
+              <div class="security-step-num">1</div>
+              <h4>SHA-256 İle Bütünlük Doğrulama</h4>
+              <p>İndirdiğiniz kurulum dosyasının resmi derleme olduğunu doğrulamak için Windows PowerShell'de şu komutu çalıştırın:</p>
+              <code class="security-code">Get-FileHash -Algorithm SHA256 .\AlePdf-0.15.0-windows-x64-setup.exe</code>
+              <p style="margin-top:10px;">Çıkan özetin yukarıdaki <code>5ef1c9eaabc9...</code> hash değeri ile birebir aynı olduğunu doğrulayabilirsiniz.</p>
+            </div>
+
+            <!-- Step 2: SmartScreen & Defender -->
+            <div class="security-step">
+              <div class="security-step-num">2</div>
+              <h4>Microsoft Defender & SmartScreen</h4>
+              <p>AlePdf açık kaynak kodlu ve bağımsız bir projedir. Kod tabanı temiz paketlenmiş olup Microsoft Defender taramaları ile uyumludur.</p>
+              <p style="margin-top:8px;">Yıllık pahalı ticari sertifika ($400+/yıl) satın alınmadığından Windows SmartScreen mavi bir koruma ekranı açabilir. Kuruluma geçmek için <strong>"Ek bilgi" (More info)</strong> ve ardından <strong>"Yine de çalıştır" (Run anyway)</strong> seçeneğine tıklayın.</p>
+            </div>
+
+            <!-- Step 3: Clean Setup -->
+            <div class="security-step">
+              <div class="security-step-num">3</div>
+              <h4>Düşük Yetki & Temiz Kaldırma</h4>
+              <p>Kurulum paketi gereksiz yönetici (UAC) yetkisi talep etmez; doğrudan kullanıcı profiline (<code>%LOCALAPPDATA%\Programs\AlePdf</code>) kurulur.</p>
+              <p style="margin-top:8px;">Arka planda gizli servis, telemetri veya reklam kurmaz. Windows Ayarlar ▸ Uygulamalar veya Denetim Masası üzerinden tek tıkla kalıntı bırakmadan kaldırılabilir.</p>
             </div>
           </div>
-          <p class="app-tagline">Mac masaüstünüzü duvar kağıdınıza sabitlenmiş etkileşimli ve özelleştirilebilir bölgelerle düzenleyin.</p>
-          <p class="app-desc">DesktopDüzen, Stardock Fences tarzı masaüstü düzenleme deneyimini yerel macOS performansı ile sunar. Dağınık masaüstü dosyalarını Finder ile anlık güncellenen gerçek klasörlere bağlı Dosya Bölgelerinde toplayın, Klasör Bölgeleri ile istediğiniz dizine hızlı erişin ve Uygulama Bölgelerinden tek tıkla uygulamalarınızı başlatın. Sıvı cam dahil 27 tema, yazıları duvar kâğıdına göre siyah veya beyaz olan tamamen şeffaf bölgeler, temalı saat, takvim ve sistem araçları, Hızlı Bakış önizlemeleri ve dosyaları taşımadan önce önizleme gösteren akıllı otomatik sıralama kuralları içerir. Menü çubuğundan sessizce çalışır, Dock ve Cmd-Tab listesinde yer kaplamaz ve kullandığınız uygulamanın klavye kısayollarını engellemez.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Swift</span>
-            <span class="tech-tag">AppKit & SwiftUI</span>
-            <span class="tech-tag">Masaüstü Katmanı</span>
-            <span class="tech-tag">Anlık Klasör Güncellemesi</span>
-            <span class="tech-tag">Yerel Gizlilik</span>
-            <span class="tech-tag">Menü Çubuğu Uygulaması</span>
-          </div>
-          <div class="app-card-actions">
-            <a class="btn-primary" href="https://github.com/themanoftalent/macosuygulama/raw/main/apps/DesktopDuzen/DesktopDuzen.dmg">DMG İndir (v1.1.0)</a>
-            <a class="btn-secondary" href="https://github.com/themanoftalent/macosuygulama/tree/main/apps/DesktopDuzen" target="_blank" rel="noopener">Kaynak Kodu ↗</a>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -365,7 +773,7 @@
           <article class="tenet-card">
             <span class="tenet-num">01 / PERFORMANS</span>
             <h3>Yerel ve Ultra Hızlı</h3>
-            <p>Ağır web sarmalayıcıları (Electron vb.) yerine Swift ve Rust ile geliştirildi. Apple Silicon işlemcilerin tüm donanım hızlandırma yeteneklerini kullanır.</p>
+            <p>Ağır web sarmalayıcıları (Electron vb.) yerine Swift ve Rust ile geliştirildi. Apple Silicon ve modern x64 işlemcilerin tüm donanım hızlandırma yeteneklerini kullanır.</p>
           </article>
 
           <article class="tenet-card">
@@ -376,8 +784,8 @@
 
           <article class="tenet-card">
             <span class="tenet-num">03 / DENEYİM</span>
-            <h3>Özgün macOS Ruhu</h3>
-            <p>macOS Human Interface Guidelines ile tam uyumlu cam efektleri, karanlık/aydınlık mod desteği ve sezgisel klavye kısayolları.</p>
+            <h3>Platforma Özgü Ruhu Koruma</h3>
+            <p>macOS için Human Interface Guidelines, Windows için akıcı modern arayüz standartları ile uyumlu pencere ve kontrol deneyimi.</p>
           </article>
 
           <article class="tenet-card">
@@ -389,7 +797,7 @@
           <article class="tenet-card">
             <span class="tenet-num">05 / VERİMLİLİK</span>
             <h3>Düşük Kaynak ve Pil Dostu</h3>
-            <p>Minimum RAM tüketimi ve optimize edilmiş arka plan süreçleri sayesinde MacBook’unuzun pil ömrünü tüketmeden arka planda sessizce çalışır.</p>
+            <p>Minimum RAM tüketimi ve optimize edilmiş GPU mimarisi sayesinde bilgisayarınızın pil ömrünü tüketmeden arka planda sessizce çalışır.</p>
           </article>
 
           <article class="tenet-card">
@@ -406,7 +814,7 @@
       <div class="section-heading">
         <p class="eyebrow">ÖNE ÇIKAN: ALEPDF</p>
         <h2>PDF işleriniz için sade bir çalışma alanı.</h2>
-        <p>Gelişmiş okuma, sayfa organize etme, doğrudan metin ve görsel düzenleme ve yerel form imzalama araçları.</p>
+        <p>macOS ve Windows 10/11 üzerinde gelişmiş okuma, sayfa organize etme, doğrudan metin ve görsel düzenleme ve yerel form imzalama araçları.</p>
       </div>
 
       <div class="features">
@@ -430,10 +838,9 @@
         </article>
       </div>
 
-      <p><strong>iPhone ve iPad:</strong> Ayrı bir yerel AlePdf uygulaması App Store incelemesinde (sürüm 1.0, derleme 7; 7 Kasım 2026 tarihinde gönderildi). Yenilenen ana ekran, okuyucu, seçilebilir metin araması, açıklamalar ve sayfa araçları içerir. Derleme 7, sonraki sayfalarda çizim yaparken ilk sayfaya dönme sorununu giderir; kalem ve işaretleyici kullanırken sayfa, yakınlaştırma ve kaydırma konumunu korur. Henüz App Store’da yayınlanmadı; aşağıdaki macOS indirmesi masaüstü sürümüdür.</p>
-
-      <div class="actions" style="margin-top:40px;">
-        <a class="button" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">AlePdf DMG İndir (v0.18.2) <span>↓</span></a>
+      <div class="actions" style="margin-top:40px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="button" href="https://github.com/themanoftalent/alepdf/releases/download/v0.18.2/AlePdf-0.18.2-macos-aarch64.dmg">macOS (DMG) İndir <span>↓</span></a>
+        <a class="button" href="https://github.com/themanoftalent/alepdf/releases/download/alepdf-windows-preview-8/AlePdf-0.15.0-windows-x64-setup.exe" style="background:#134e7c;color:#fff;">Windows (Setup.exe) İndir <span>↓</span></a>
         <a class="text-link" href="https://github.com/themanoftalent/alepdf" target="_blank" rel="noopener">AlePdf GitHub Deposu ↗</a>
       </div>
     </section>
@@ -442,7 +849,7 @@
     <section class="wrap section" id="temizale" style="border-top:1px solid var(--line);">
       <div class="section-heading">
         <p class="eyebrow">ÖNE ÇIKAN: TEMİZALE</p>
-        <h2>Mac'inizi ilk günkü hızına kavuşturun.</h2>
+        <h2>Bilgisayarınızı ilk günkü hızına kavuşturun.</h2>
         <p>Gereksiz önbellekleri, logları, çöp kutusu kalıntılarını ve kaldırılan uygulamaların artıklarını tek tıkla güvenle temizleyin.</p>
       </div>
 
@@ -456,7 +863,7 @@
         <article>
           <span class="number">02</span>
           <h3>Eksiksiz Uygulama Kaldırma.</h3>
-          <p>Uygulamaların Library ve Application Support klasörlerine bıraktığı tüm artık dosyaları bularak tamamen kaldırır.</p>
+          <p>Uygulamaların diskte bıraktığı tüm artık dosyaları bularak tamamen kaldırır.</p>
           <span class="tag">Artık Dosya Temizliği</span>
         </article>
         <article>
@@ -478,7 +885,7 @@
       <div class="wrap">
         <p class="eyebrow">BAĞIMSIZ VE AÇIK KAYNAKLI GELİŞTİRME</p>
         <h2>Beni takip edin.<br>Projeleri keşfedin.</h2>
-        <p>macOS Uygulama paketi Mehmet Akif Çifçi (@themanoftalent) tarafından geliştirilmekte ve aktif olarak sürdürülmektedir.</p>
+        <p>Uygulama paketi Mehmet Akif Çifçi (@themanoftalent) tarafından geliştirilmekte ve aktif olarak sürdürülmektedir.</p>
         <div class="actions">
           <a class="button" href="https://github.com/themanoftalent" target="_blank" rel="noopener">@themanoftalent’i Takip Et ↗</a>
           <a class="button outline" href="https://github.com/themanoftalent/macosuygulama" target="_blank" rel="noopener">Bu Siteyi Yıldızla ↗</a>
@@ -489,9 +896,9 @@
 
   <footer class="wrap">
     <a class="brand" href="/tr/">
-      macOS Uygulama<span>BAĞIMSIZ MACOS EKOSİSTEMİ</span>
+      macOS & Windows Uygulama<span>BAĞIMSIZ MASAÜSTÜ EKOSİSTEMİ</span>
     </a>
-    <p>Geliştirici: Mehmet Akif Çifçi (@themanoftalent). Tüm hakları saklıdır.<br>Açık kaynaklı yerel macOS uygulama platformu.</p>
+    <p>Geliştirici: Mehmet Akif Çifçi (@themanoftalent). Tüm hakları saklıdır.<br>Açık kaynaklı yerel masaüstü uygulama platformu.</p>
     <a href="https://github.com/themanoftalent" target="_blank" rel="noopener">GitHub Profilim ↗</a>
   </footer>
 </body>
