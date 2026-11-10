@@ -108,24 +108,24 @@ windows_apps = [
         "release_url": "https://github.com/themanoftalent/macosuygulama/releases/tag/windows-v1.0.0",
     },
     {
-        "id": "aleclip",
+        "id": "clipale",
         "category": "menubar productivity",
-        "icon": "/assets/apps/aleclip.png",
-        "title_tr": "AleClip for Windows",
-        "title_en": "AleClip for Windows",
+        "icon": "/assets/apps/clipale.png",
+        "title_tr": "Clipale for Windows",
+        "title_en": "Clipale for Windows",
         "version": "v1.0.0",
         "tagline_tr": "Modern & Hafif Windows Pano Yöneticisi.",
         "tagline_en": "Modern & Lightweight Native Clipboard Manager for Windows.",
         "desc_tr": "C# ve .NET 8 WPF ile Windows 10 & 11 için geliştirilmiş, odak çalmayan (WS_EX_NOACTIVATE) yüzen pano geçmişi. Alt+V ile anında açılır, doğrudan yapıştırma ve Türkçe büyük/küçük I/ı/İ/i uyumlu arama sunar.",
         "desc_en": "Built with C# and .NET 8 WPF for Windows 10 & 11. Non-activating floating panel (Alt+V) slides smoothly without stealing focus. Instant search with Turkish case-folding and direct paste.",
         "tech_tags": ["C# .NET 8", "WPF Native", "Pano Yöneticisi", "Local-First", "Tek Dosya EXE"],
-        "exe_url": "https://github.com/themanoftalent/aleclip-windows/releases/download/v1.0.0/AleClip.exe",
-        "exe_name": "AleClip.exe",
+        "exe_url": "https://github.com/themanoftalent/clipale-windows/releases/download/v1.0.0/Clipale.exe",
+        "exe_name": "Clipale.exe",
         "exe_size": "68.7 MB",
-        "zip_url": "https://github.com/themanoftalent/aleclip-windows/releases/download/v1.0.0/AleClip-Windows-x64.zip",
+        "zip_url": "https://github.com/themanoftalent/clipale-windows/releases/download/v1.0.0/Clipale-Windows-x64.zip",
         "hash": "405287386ed095c5b1d71effeb686aa2ed4fda3546bca4bd70405cf3ea102728",
-        "repo": "https://github.com/themanoftalent/aleclip-windows",
-        "release_url": "https://github.com/themanoftalent/aleclip-windows/releases/tag/v1.0.0",
+        "repo": "https://github.com/themanoftalent/clipale-windows",
+        "release_url": "https://github.com/themanoftalent/clipale-windows/releases/tag/v1.0.0",
     },
     {
         "id": "ekranale",
@@ -286,3 +286,29 @@ def render_cards(lang="tr"):
     return "\n\n".join(html_cards)
 
 # Update file helper
+def update_showcase(path, lang):
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    start_marker = '<!-- Windows Apps Grid -->\n        <div class="apps-grid">'
+    end_marker = '\n        </div>\n\n        <!-- Windows'
+    
+    start_idx = content.find(start_marker)
+    if start_idx == -1:
+        print(f"Could not find start marker in {path}")
+        return
+    
+    end_idx = content.find(end_marker, start_idx)
+    if end_idx == -1:
+        print(f"Could not find end marker in {path}")
+        return
+
+    new_cards = render_cards(lang)
+    new_content = content[:start_idx + len(start_marker)] + "\n" + new_cards + content[end_idx:]
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(new_content)
+    print(f"Updated {path}")
+
+if __name__ == "__main__":
+    update_showcase("dist/tr/index.html", "tr")
+    update_showcase("dist/index.html", "en")

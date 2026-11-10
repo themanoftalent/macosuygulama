@@ -20,7 +20,7 @@ Thanks for taking the time to help. This repository holds the website at [macosu
    ```
 
 3. Check both http://127.0.0.1:4173/ and http://127.0.0.1:4173/tr/ at desktop and phone widths.
-4. Commit with a short message in the imperative, such as `Fix AleClip download link`.
+4. Commit with a short message in the imperative, such as `Fix Clipale download link`.
 5. Open a pull request that says what changed and why. Add a screenshot for visual changes.
 
 Vercel builds a preview for every pull request, so reviewers can see your change before it merges.

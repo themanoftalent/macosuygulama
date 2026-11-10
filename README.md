@@ -27,12 +27,12 @@ This repository holds the website only. Each app lives in its own repository, li
 | [RecordAle](https://github.com/themanoftalent/RecordAle) | Screen recording for walkthroughs with auto zoom and cursor smoothing | TypeScript, Motion Canvas | [![release](https://img.shields.io/github/v/release/themanoftalent/RecordAle?label=)](https://github.com/themanoftalent/RecordAle/releases/latest) | see repo |
 | [Foldale](https://github.com/themanoftalent/foldale) | Dual-pane, keyboard-driven file manager | TypeScript, Rust | [![release](https://img.shields.io/github/v/release/themanoftalent/foldale?label=)](https://github.com/themanoftalent/foldale/releases/latest) | see repo |
 | [Saklamac Pro](https://github.com/themanoftalent/saklamac) | Notch-safe menu bar item manager with an overflow shelf | Swift 6, SwiftUI | source only | MIT |
-| [AleClip](https://github.com/themanoftalent/aleclip) | Clipboard history with search, instant paste, bulk delete, Google Drive week folders and Mac–iPhone sync | Swift 6, AppKit | [![release](https://img.shields.io/github/v/release/themanoftalent/aleclip?label=)](https://github.com/themanoftalent/aleclip/releases/latest) | see repo |
+| [Clipale](https://github.com/themanoftalent/clipale) | Clipboard history with search, instant paste, bulk delete, Google Drive week folders and Mac–iPhone sync | Swift 6, AppKit | [![release](https://img.shields.io/github/v/release/themanoftalent/clipale?label=)](https://github.com/themanoftalent/clipale/releases/latest) | see repo |
 | [AleBar](https://github.com/themanoftalent/AleBar) | Menu bar organizer, styling and command palette | Swift 6 | [![release](https://img.shields.io/github/v/release/themanoftalent/AleBar?label=)](https://github.com/themanoftalent/AleBar/releases/latest) | MIT |
 | [AleDesk](https://github.com/themanoftalent/AleDesk) | Remote desktop control and file transfer for macOS and Windows | Rust, Flutter | source only | AGPL-3.0 |
 | [DesktopDüzen](apps/DesktopDuzen) | Desktop zone organizer (Stardock Fences style) with live sync, auto-sort & widgets | Swift 6, AppKit, SwiftUI | [DMG (v1.1.0)](apps/DesktopDuzen/DesktopDuzen.dmg) | MIT |
 
-AleClip also has companion clients for [iOS](https://github.com/themanoftalent/aleclip-ios), [Windows](https://github.com/themanoftalent/aleclip-windows) and [Android](https://github.com/themanoftalent/aleclip-android).
+Clipale also has companion clients for [iOS](https://github.com/themanoftalent/clipale-ios), [Windows](https://github.com/themanoftalent/clipale-windows) and [Android](https://github.com/themanoftalent/clipale-android).
 
 ## Design principles
 
