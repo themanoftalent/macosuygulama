@@ -21,7 +21,7 @@ This repository holds the website only. Each app lives in its own repository, li
 
 | App | What it does | Stack | Latest | License |
 |---|---|---|---|---|
-| [AlePdf](https://github.com/themanoftalent/alepdf) | PDF editing, annotation, page organizing, form filling and signing | Rust, egui | [![release](https://img.shields.io/github/v/release/themanoftalent/alepdf?label=)](https://github.com/themanoftalent/alepdf/releases/latest) | MIT OR Apache-2.0 |
+| [PdfAle](https://github.com/themanoftalent/pdfale) | PDF editing, annotation, page organizing, form filling and signing | Rust, egui | [![release](https://img.shields.io/github/v/release/themanoftalent/pdfale?label=)](https://github.com/themanoftalent/pdfale/releases/latest) | MIT OR Apache-2.0 |
 | [Temizale](https://github.com/themanoftalent/Temizale) | Cache and Trash cleaning, orphaned file scrubbing, app uninstalling | Swift 6, SwiftUI | [![release](https://img.shields.io/github/v/release/themanoftalent/Temizale?label=)](https://github.com/themanoftalent/Temizale/releases/latest) | see repo |
 | [Miknatizale](https://github.com/themanoftalent/Miknatizale) | Window snapping to halves, thirds and quadrants | Swift 6, AppKit | [![release](https://img.shields.io/github/v/release/themanoftalent/Miknatizale?label=)](https://github.com/themanoftalent/Miknatizale/releases/latest) | see repo |
 | [RecordAle](https://github.com/themanoftalent/RecordAle) | Screen recording for walkthroughs with auto zoom and cursor smoothing | TypeScript, Motion Canvas | [![release](https://img.shields.io/github/v/release/themanoftalent/RecordAle?label=)](https://github.com/themanoftalent/RecordAle/releases/latest) | see repo |

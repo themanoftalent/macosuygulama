@@ -3,7 +3,7 @@ from html.parser import HTMLParser
 from html import escape
 import json
 root=Path(__file__).resolve().parent.parent
-pairs='''AlePdf — A clearer space for your PDFs.|AlePdf — PDF’leriniz için sade bir çalışma alanı.
+pairs='''PdfAle — A clearer space for your PDFs.|PdfAle — PDF’leriniz için sade bir çalışma alanı.
 Skip to content|İçeriğe geç
 FOR MAC|MAC İÇİN
 Features|Özellikler
@@ -15,14 +15,14 @@ for your |daha sade bir
 PDFs.|alan.
 From the first read to the final signature. Bring your everyday PDF work together in a focused workspace on your Mac.|İlk okumadan son imzaya kadar. Günlük PDF işlerinizi Mac’inizde sade bir çalışma alanında bir araya getirin.
 Explore the Mac preview |Mac önizlemesini incele 
-Star AlePdf ↗|AlePdf’ye yıldız ver ↗
+Star PdfAle ↗|PdfAle’ye yıldız ver ↗
 Apple Silicon · Preview 0.15.0 · Open-source foundation|Apple Silicon · Önizleme 0.15.0 · Açık kaynak temeli
 01 / MADE FOR YOUR DESKTOP|01 / MASAÜSTÜNÜZ İÇİN
 Your document. Your workflow.|Sizin belgeniz. Sizin çalışma şekliniz.
 A little less friction.|Daha az uğraş.
 THE REAL APP|GERÇEK UYGULAMA
 READ / REVIEW / REFINE|OKU / İNCELE / DÜZENLE
-Actual AlePdf preview · Fictional sample document|Gerçek AlePdf önizlemesi · Kurgusal örnek belge
+Actual PdfAle preview · Fictional sample document|Gerçek PdfAle önizlemesi · Kurgusal örnek belge
 Built for macOS|macOS için geliştirildi
 Work with local files|Yerel dosyalarla çalışın
 No account for core tools|Temel araçlar için hesap gerekmez
@@ -45,7 +45,7 @@ THE FINISHING TOUCH|SON DOKUNUŞ
 Fill it in.|Doldurun.
 Make it yours.|Size ait olsun.
 Add text, a date, a checkmark, a signature, or your initials right where you need them.|İstediğiniz yere metin, tarih, onay işareti, imza veya baş harflerinizi ekleyin.
-Fill & Sign is part of the desktop workflow. It does not require a Google Form or an AlePdf account.|Doldur ve İmzala, masaüstü iş akışının bir parçasıdır. Google Formu veya AlePdf hesabı gerektirmez.
+Fill & Sign is part of the desktop workflow. It does not require a Google Form or an PdfAle account.|Doldur ve İmzala, masaüstü iş akışının bir parçasıdır. Google Formu veya PdfAle hesabı gerektirmez.
 Visual signatures are not a hosted signing service. This page makes no claim of identity verification, an audit trail, or legal certification.|Görsel imzalar, çevrim içi bir imza hizmeti değildir. Bu sayfa kimlik doğrulama, denetim kaydı veya hukuki sertifikasyon iddiasında bulunmaz.
 A few useful answers ↓|Yararlı yanıtlar ↓
 LOCAL BY DEFAULT|VARSAYILAN OLARAK YEREL
@@ -56,11 +56,11 @@ Opening and working with local PDFs does not need an account. Optional cloud pro
 When a file name already exists, the preview lets you choose |Aynı dosya adı varsa önizleme şu seçenekleri sunar: 
 Replace, Keep both, or Cancel.|Değiştir, İkisini de tut veya İptal.
 CHOOSE YOUR PLATFORM|PLATFORMUNUZU SEÇİN
-Download AlePdf.|AlePdf’yi indirin.
+Download PdfAle.|PdfAle’yi indirin.
 Native PDF tools for your desktop.|Masaüstünüz için yerel PDF araçları.
 The Mac preview is ready to download. The Windows installer is still building and being validated.|Mac önizlemesi indirilmeye hazır. Windows yükleyicisinin derleme ve doğrulama işlemleri devam ediyor.
 MACOS · PREVIEW AVAILABLE|MACOS · ÖNİZLEME HAZIR
-AlePdf for Mac|Mac için AlePdf
+PdfAle for Mac|Mac için PdfAle
 Preview version|Önizleme sürümü
 Build|Derleme
 Signing|İmzalama
@@ -70,7 +70,7 @@ DMG integrity, bundled notices and app signature checked. This preview is not no
 SHA-256 checksums ↗|SHA-256 doğrulama değerleri ↗
 Release notes & source ↗|Sürüm notları ve kaynak kod ↗
 WINDOWS · BUILD IN PREPARATION|WINDOWS · DERLEME HAZIRLANIYOR
-AlePdf for Windows|Windows için AlePdf
+PdfAle for Windows|Windows için PdfAle
 Windows x64 · .exe installer|Windows x64 · .exe yükleyici
 Target|Hedef
 64-bit Windows|64 bit Windows
@@ -87,13 +87,13 @@ A simple place to start.|Başlamak kolay.
 Check the build.|Derlemeyi kontrol edin.
 Choose an Apple Silicon package from the project’s verified release channel and compare its SHA-256 checksum.|Projenin doğrulanmış sürüm kanalından Apple Silicon paketini seçin ve SHA-256 değerini karşılaştırın.
 Install on your Mac.|Mac’inize kurun.
-Open the DMG and copy AlePdf.app to Applications. Keep a backup if you are replacing an older version.|DMG dosyasını açın ve AlePdf.app uygulamasını Uygulamalar klasörüne kopyalayın. Eski bir sürümü değiştiriyorsanız yedeğini saklayın.
+Open the DMG and copy PdfAle.app to Applications. Keep a backup if you are replacing an older version.|DMG dosyasını açın ve PdfAle.app uygulamasını Uygulamalar klasörüne kopyalayın. Eski bir sürümü değiştiriyorsanız yedeğini saklayın.
 Open a local PDF.|Yerel bir PDF açın.
-Launch AlePdf and choose Open. If macOS blocks an unnotarized preview, stop and wait for a trusted signed release; do not disable security protections.|AlePdf’yi başlatın ve Aç’ı seçin. macOS noter onayı olmayan önizlemeyi engellerse güvenilir imzalı bir sürümü bekleyin; güvenlik korumalarını kapatmayın.
+Launch PdfAle and choose Open. If macOS blocks an unnotarized preview, stop and wait for a trusted signed release; do not disable security protections.|PdfAle’yi başlatın ve Aç’ı seçin. macOS noter onayı olmayan önizlemeyi engellerse güvenilir imzalı bir sürümü bekleyin; güvenlik korumalarını kapatmayın.
 GOOD TO KNOW|BİLMEKTE FAYDA VAR
 A few answers.|Birkaç yanıt.
 Is this a browser PDF editor?|Bu bir tarayıcı PDF düzenleyicisi mi?
-No. AlePdf is a native desktop app. This website introduces the app and its release status; it does not upload or edit your documents.|Hayır. AlePdf yerel bir masaüstü uygulamasıdır. Bu site uygulamayı ve sürüm durumunu tanıtır; belgelerinizi yüklemez veya düzenlemez.
+No. PdfAle is a native desktop app. This website introduces the app and its release status; it does not upload or edit your documents.|Hayır. PdfAle yerel bir masaüstü uygulamasıdır. Bu site uygulamayı ve sürüm durumunu tanıtır; belgelerinizi yüklemez veya düzenlemez.
 Do I need to sign up?|Hesap açmam gerekiyor mu?
 No account is needed for core local PDF work. Optional external services may have their own accounts and terms.|Temel yerel PDF işlemleri için hesap gerekmez. İsteğe bağlı harici hizmetlerin kendi hesapları ve koşulları olabilir.
 Can I use it on Windows or Intel Macs?|Windows veya Intel Mac’lerde kullanabilir miyim?
@@ -102,16 +102,16 @@ Are all the tools finished?|Tüm araçlar tamamlandı mı?
 No. Tool availability is labeled in the app. This preview highlights viewing, annotations, page organization, and Fill & Sign; it does not promise every item in the tool catalog is ready.|Hayır. Araçların durumu uygulamada belirtilir. Bu önizleme görüntüleme, açıklama, sayfa düzenleme ve Doldur ve İmzala araçlarını öne çıkarır; katalogdaki her aracın hazır olduğu anlamına gelmez.
 Where should I report a problem?|Bir sorunu nereye bildirmeliyim?
 Open an issue in the |Şurada bir sorun kaydı açın: 
-AlePdf GitHub repository|AlePdf GitHub deposu
+PdfAle GitHub repository|PdfAle GitHub deposu
 . Include your macOS version and the steps to reproduce it. Use a synthetic sample instead of uploading private documents.|. macOS sürümünüzü ve sorunun nasıl oluştuğunu belirtin. Özel belgeler yerine kurgusal örnek kullanın.
 What is the license?|Lisans nedir?
-AlePdf is open-source. The repository includes MIT and Apache-2.0 license texts and contributor notices.|AlePdf açık kaynaklıdır. Kaynak deposu MIT ve Apache-2.0 lisans metinlerini ve katkıda bulunanların bildirimlerini içerir.
+PdfAle is open-source. The repository includes MIT and Apache-2.0 license texts and contributor notices.|PdfAle açık kaynaklıdır. Kaynak deposu MIT ve Apache-2.0 lisans metinlerini ve katkıda bulunanların bildirimlerini içerir.
 project notices|proje bildirimleri
  and | ve 
 repository|kaynak deposu
 PREVIEW NOTES / 31 OCTOBER 2026|ÖNİZLEME NOTLARI / 31 EKİM 2026
 Small details. A better everyday.|Küçük ayrıntılar. Daha kolay işler.
-Clearer AlePdf identity.|Daha net AlePdf kimliği.
+Clearer PdfAle identity.|Daha net PdfAle kimliği.
  Consistent Home and About branding, plus dedicated Follow and Star links.| Ana Sayfa ve Hakkında ekranlarında tutarlı adlandırma; ayrı Takip Et ve Yıldız Ver bağlantıları.
 Safer Drive-folder saves.|Drive klasörüne daha güvenli kayıt.
  Explicit collision choices and clearer wording about local saving and later sync.| Dosya adı çakışmalarında açık seçenekler; yerel kayıt ve sonraki eşitleme için daha anlaşılır açıklamalar.
@@ -120,7 +120,7 @@ Honest availability.|Açık kullanılabilirlik bilgisi.
 BUILT IN THE OPEN|AÇIK GELİŞTİRME
 Follow me.|Beni takip edin.
 Star the project.|Projeye yıldız verin.
-AlePdf is maintained and customized by Mehmet Akif Cifci.|AlePdf’nin bakımı ve özelleştirilmesi Mehmet Akif Cifci tarafından yapılmaktadır.
+PdfAle is maintained and customized by Mehmet Akif Cifci.|PdfAle’nin bakımı ve özelleştirilmesi Mehmet Akif Cifci tarafından yapılmaktadır.
 Follow @themanoftalent for the work behind the app.|Uygulamanın gelişimini görmek için @themanoftalent’i takip edin.
 YOUR PDF WORKSPACE|PDF ÇALIŞMA ALANINIZ
 macOS Uygulama. Open-source ecosystem curated by Mehmet Akif Çifçi.|macOS Uygulama. Mehmet Akif Çifçi tarafından geliştirilen açık kaynaklı ekosistem.
@@ -138,7 +138,7 @@ translations.update({
 })
 translations.update({'DESKTOP APP': 'MASAÜSTÜ UYGULAMASI', 'NATIVE DESKTOP APP · LOCAL FIRST': 'YEREL MASAÜSTÜ UYGULAMASI · ÖNCE YEREL', 'From the first read to the final signature. Bring your everyday PDF work together in a focused desktop workspace.': 'İlk okumadan son imzaya kadar. Günlük PDF işlerinizi odaklı bir masaüstü çalışma alanında bir araya getirin.', 'Explore downloads ': 'İndirmelere göz atın ', 'Windows x64 preview · Mac signing pending · Open-source foundation': 'Windows x64 önizlemesi · Mac imzalama bekleniyor · Açık kaynak temeli', 'Mac distribution is paused until Developer ID signing and Apple notarization are complete. The unsigned Windows x64 preview is available below.': 'Mac dağıtımı, Developer ID imzalama ve Apple noter onayı tamamlanana kadar duraklatıldı. İmzasız Windows x64 önizlemesini aşağıdan indirebilirsiniz.', 'WINDOWS · UNSIGNED PREVIEW': 'WINDOWS · İMZASIZ ÖNİZLEME', 'Install and startup checks passed': 'Kurulum ve açılış kontrolleri geçti', '0.15.0 · windows-preview.1': '0.15.0 · windows-preview.1', 'Unsigned preview': 'İmzasız önizleme', 'Unsigned preview, 78.8 MB. Windows installation, CLI, GUI startup and uninstall checks passed on the build runner. Interactive PDF editing has not been tested. Windows may block an unrecognized publisher; do not disable security protections.': 'İmzasız önizleme, 78,8 MB. Windows kurulum, komut satırı, arayüz açılışı ve kaldırma kontrolleri derleme ortamında geçti. Etkileşimli PDF düzenleme test edilmedi. Windows tanınmayan bir yayıncıyı engelleyebilir; güvenlik korumalarını devre dışı bırakmayın.', 'Mac download distribution is paused pending Developer ID signing and Apple notarization. The unsigned Windows x64 preview is available above, with installation and startup checks passed. No Intel Mac or Linux package is offered.': 'Mac indirmesi, Developer ID imzalama ve Apple noter onayı beklenirken duraklatıldı. Kurulum ve açılış kontrolleri geçen imzasız Windows x64 önizlemesini yukarıdan indirebilirsiniz. Intel Mac veya Linux paketi sunulmuyor.', '. Include your operating system version and the steps to reproduce it. Use a synthetic sample instead of uploading private documents.': '. İşletim sistemi sürümünüzü ve sorunu yeniden oluşturma adımlarını ekleyin. Özel belgeler yerine kurgusal bir örnek kullanın.'})
 translations[' NATIVE DESKTOP APP · LOCAL FIRST']=' YEREL MASAÜSTÜ UYGULAMASI · ÖNCE YEREL'
-translations.update({'Edit PDF starts with your file.': 'PDF Düzenle, dosyanızla başlar.', ' Choosing Edit PDF opens the file picker when no document is open, then enters editing. Cancel leaves the document unchanged.': ' Açık belge yokken PDF Düzenle seçimi dosya seçiciyi açar ve ardından düzenlemeye geçer. İptal etmek belgeyi değiştirmez.', 'Replace selected images.': 'Seçili resimleri değiştirin.', ' A labeled Replace Image action accepts PNG/JPEG, retains the selected bounds, and supports undo and redo. Other shared image instances remain unchanged. Grouped/vector artwork is clearly marked as unsupported.': ' Etiketli Resmi Değiştir işlemi PNG/JPEG kabul eder, seçimin sınırlarını korur ve geri alma ile yinelemeyi destekler. Aynı resmi paylaşan diğer örnekler değişmez. Gruplanmış/vektör çizimler açıkça desteklenmiyor olarak belirtilir.', 'A friendlier AlePdf.': 'Daha sıcak bir AlePdf.', ' Original cat branding joins dedicated Follow and Star links.': ' Özgün kedi simgesi, ayrı Takip Et ve Yıldız Ver bağlantılarına eşlik eder.'})
+translations.update({'Edit PDF starts with your file.': 'PDF Düzenle, dosyanızla başlar.', ' Choosing Edit PDF opens the file picker when no document is open, then enters editing. Cancel leaves the document unchanged.': ' Açık belge yokken PDF Düzenle seçimi dosya seçiciyi açar ve ardından düzenlemeye geçer. İptal etmek belgeyi değiştirmez.', 'Replace selected images.': 'Seçili resimleri değiştirin.', ' A labeled Replace Image action accepts PNG/JPEG, retains the selected bounds, and supports undo and redo. Other shared image instances remain unchanged. Grouped/vector artwork is clearly marked as unsupported.': ' Etiketli Resmi Değiştir işlemi PNG/JPEG kabul eder, seçimin sınırlarını korur ve geri alma ile yinelemeyi destekler. Aynı resmi paylaşan diğer örnekler değişmez. Gruplanmış/vektör çizimler açıkça desteklenmiyor olarak belirtilir.', 'A friendlier PdfAle.': 'Daha sıcak bir PdfAle.', ' Original cat branding joins dedicated Follow and Star links.': ' Özgün kedi simgesi, ayrı Takip Et ve Yıldız Ver bağlantılarına eşlik eder.'})
 translations.update({'Local build tested': 'Yerel sürüm test edildi', 'Latest source & changes ↗': 'Güncel kaynak ve değişiklikler ↗', 'These updates passed local Mac tests. The updated Windows installer is still being validated; the Windows download above remains the earlier preview.': 'Bu güncellemeler yerel Mac testlerini geçti. Güncellenmiş Windows yükleyicisinin doğrulaması sürüyor; yukarıdaki Windows indirmesi önceki önizlemeyi sunmaya devam ediyor.'})
 translations.update({'0.15.0 · windows-preview.8': '0.15.0 · windows-preview.8', 'Unsigned preview. Home-tool entry and image replacement regression tests, installation, CLI, GUI startup and uninstall checks passed on the Windows runner. Manual interactive editing on Windows has not been tested. Windows may block an unrecognized publisher; do not disable security protections.': 'İmzasız önizleme. Ana ekran araçlarına giriş ve resim değiştirme regresyon testleri ile kurulum, komut satırı, arayüz açılışı ve kaldırma kontrolleri Windows derleme ortamında geçti. Windows üzerinde elle etkileşimli düzenleme test edilmedi. Windows tanınmayan bir yayıncıyı engelleyebilir; güvenlik korumalarını devre dışı bırakmayın.', 'Windows preview 8 includes the updates below. Native Mac checks and Windows regression, installation and startup checks passed. Some advanced tools remain planned; see the labels inside the app.': 'Windows önizleme 8, aşağıdaki güncellemeleri içerir. Yerel Mac kontrolleri ile Windows regresyon, kurulum ve açılış kontrolleri geçti. Bazı gelişmiş araçlar hâlâ planlanıyor; uygulamadaki etiketlere bakın.', 'Native desktop tools': 'Yerel masaüstü araçları', 'Core PDF work happens on your computer. You choose when a document leaves it.': 'Temel PDF işlemleri bilgisayarınızda gerçekleşir. Belgenin ne zaman dışarı çıkacağına siz karar verirsiniz.', 'Open a tool. Choose your PDF.': 'Aracı seçin. PDF’nizi açın.', ' Organize pages, comments, Fill & Sign, forms and protection now ask for a PDF when none is open, then enter their workspace. An open document is reused; cancelling leaves your workspace unchanged.': ' Açık belge yokken sayfa düzenleme, açıklamalar, Doldur ve İmzala, form ve koruma araçları önce PDF seçmenizi ister, ardından ilgili çalışma alanını açar. Açık belge yeniden kullanılır; iptal etmek çalışma alanınızı değiştirmez.'})
 translations.update({' Original cat branding joins dedicated Follow and Star links. Draw and Fill & Sign now use clearly different pencil and handwritten-signature symbols.': ' Özgün kedi simgesi, ayrı Takip Et ve Yıldız Ver bağlantılarıyla birlikte gelir. Çiz ve Doldur ve İmzala artık birbirinden belirgin biçimde farklı kalem ve el yazısı imza simgeleri kullanır.'})
@@ -152,14 +152,14 @@ class Translator(HTMLParser):
   for k,v in attrs:
    if tag=='html' and k=='lang':v='tr'
    if k in ('src','href') and v and (v.startswith('assets/') or v=='style.css' or v=='locale.js'):v='/'+v
-   if k=='aria-label':v={'Main':'Ana menü','AlePdf home':'AlePdf ana sayfa','Language':'Dil'}.get(v,v)
-   if k=='alt' and v:v={'AlePdf displaying a fictional Studio North project brief, with PDF navigation and annotation tools':'PDF gezinme ve açıklama araçlarıyla kurgusal Studio North proje belgesini gösteren AlePdf','AlePdf Fill and Sign panel with text, checkmark, date, signature, and initials controls alongside a fictional PDF':'Kurgusal PDF yanında metin, onay, tarih, imza ve baş harf kontrolleriyle AlePdf Doldur ve İmzala paneli'}.get(v,v)
-   if tag=='meta' and k=='content' and v.startswith('Meet AlePdf:'):v='AlePdf ile tanışın: Windows ve Mac için yerel PDF araçları. Belgeleri okuyun, açıklama ekleyin, düzenleyin ve doldurun.'
+   if k=='aria-label':v={'Main':'Ana menü','PdfAle home':'PdfAle ana sayfa','Language':'Dil'}.get(v,v)
+   if k=='alt' and v:v={'PdfAle displaying a fictional Studio North project brief, with PDF navigation and annotation tools':'PDF gezinme ve açıklama araçlarıyla kurgusal Studio North proje belgesini gösteren PdfAle','PdfAle Fill and Sign panel with text, checkmark, date, signature, and initials controls alongside a fictional PDF':'Kurgusal PDF yanında metin, onay, tarih, imza ve baş harf kontrolleriyle PdfAle Doldur ve İmzala paneli'}.get(v,v)
+   if tag=='meta' and k=='content' and v.startswith('Meet PdfAle:'):v='PdfAle ile tanışın: Windows ve Mac için yerel PDF araçları. Belgeleri okuyun, açıklama ekleyin, düzenleyin ve doldurun.'
    translated.append(k if v is None else f'{k}="{escape(v,quote=True)}"')
   self.out.append('<'+tag+(' '+' '.join(translated) if translated else '')+'>')
  def handle_endtag(self,t):self.out.append('</'+t+'>')
  def handle_data(self,d):
-  if d.strip() and d not in translations and d not in {'AlePdf','↓','01','02','03','0.15.0','mac-preview.1','Apple Silicon · .dmg','.','TR','EN',' / '}:self.missing.append(d)
+  if d.strip() and d not in translations and d not in {'PdfAle','↓','01','02','03','0.15.0','mac-preview.1','Apple Silicon · .dmg','.','TR','EN',' / '}:self.missing.append(d)
   self.out.append(escape(translations.get(d,d)))
 p=Translator();p.feed((root/'dist/index.html').read_text());assert not p.missing,p.missing
 (root/'dist/tr/index.html').write_text(''.join(p.out))

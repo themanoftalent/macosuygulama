@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 256 256">
+<!-- Original AlePdf vector mark, drawn for Mehmet Akif Cifci, 2026-10-31. No external images, fonts or reference artwork. MIT OR Apache-2.0. -->
+<rect x="16" y="16" width="224" height="224" rx="48" fill="#087f79"/>
+<path d="M105 193 C109 175 108 144 119 119 C109 111 104 101 106 89 L104 58 L123 72 C131 69 140 70 147 74 L163 58 L160 95 C160 109 150 119 140 122 C149 144 147 166 147 190 Z" fill="#fff6e9"/>
+<path d="M143 189 C177 190 195 164 181 146 C175 138 166 141 168 150" fill="none" stroke="#fff6e9" stroke-width="10" stroke-linecap="round"/>
+<path d="M117 97 L124 100 M140 100 L147 97" fill="none" stroke="#087f79" stroke-width="3" stroke-linecap="round"/>
+<path d="M130 107 L134 107 L132 110 Z" fill="#087f79"/>
+</svg>
