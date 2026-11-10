@@ -1,0 +1,50 @@
+{
+  "desktopduzen": {
+    "base": "DesktopDuzen-1.0.0-windows-x64",
+    "exe_hash": "b8f2380e958608a4b9d7894ef532749acd9602fbf9b70692a4a9bae2267686d0",
+    "zip_hash": "adc071b973721c62a225fb1e5d7c5cbdab37fcb6151375be09a9a20f9be6bc3b",
+    "size_kb": "409 KB"
+  },
+  "temizale": {
+    "base": "Temizale-1.0.0-windows-x64",
+    "exe_hash": "03a3178a450ac4c5fec3f175c9477331cf1aaed0b6086f61f5b0b4e4ac9d63db",
+    "zip_hash": "f01104deabf8f492e100200e7aaebb9e3e0cffe6bcfaaca8a257c2a1e21ef7cd",
+    "size_kb": "536 KB"
+  },
+  "miknatizale": {
+    "base": "Miknatizale-1.0.0-windows-x64",
+    "exe_hash": "272138973ee772fccf9469d2bd376c08dee5e65ac4fe5a8a32debb990055c775",
+    "zip_hash": "625beb9415b07111e4541c30cc90041bf106c54144de21a6ef3aac51c8d8340d",
+    "size_kb": "836 KB"
+  },
+  "yenidosyale": {
+    "base": "YeniDosyale-1.0.0-windows-x64",
+    "exe_hash": "5869b9425057713f6a824398a903c6c01bb4899c704a2b3589009fa625522944",
+    "zip_hash": "9c47368b397cc6d8d8f874f057063432b5b31e81acb02f27819f1fd76ee9060d",
+    "size_kb": "341 KB"
+  },
+  "foldale": {
+    "base": "Foldale-1.0.0-windows-x64",
+    "exe_hash": "f9d475bf1e45c662f7e29ab092ea29b3a5a4c53993a24ea8e78f5e733b551d08",
+    "zip_hash": "dea7e745f4e9a9da410331e956642570e2d137a713e5b985be28ba946794ae1a",
+    "size_kb": "278 KB"
+  },
+  "ekranale": {
+    "base": "Ekranale-1.0.0-windows-x64",
+    "exe_hash": "b022a5eea7af1a7039ce3dee27213ad6d23e7595775417a4f5cbbd2c6d3efbe4",
+    "zip_hash": "b8e987b5b2f0e0db5b804b1047e4362c7736a387a4e83351bd05ba31580a976e",
+    "size_kb": "364 KB"
+  },
+  "alecal": {
+    "base": "AleCal-1.0.0-windows-x64",
+    "exe_hash": "c6f6dab11d027aec48ddfd52170936f3d58ef51773b5307839cb2ef63e937336",
+    "zip_hash": "03f335242684c894cd955bff25ada5a8a76db095a97942a4f3e40a09c55b2beb",
+    "size_kb": "308 KB"
+  },
+  "alebar": {
+    "base": "AleBar-1.0.0-windows-x64",
+    "exe_hash": "65fcd4758c0cbc18ad3d721385b418451e04f504539f06ad51ad45ca7dea00f8",
+    "zip_hash": "3a64785aa493e83466d7ba56690b5098ad29115ec6868335fa2a5384c6b6d586",
+    "size_kb": "334 KB"
+  }
+}
