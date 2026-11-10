@@ -40,13 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Check URL hash on load or change
   function checkHash() {
-    if (window.location.hash === '#windows' || window.location.hash === '#windows-apps' || window.location.hash === '#windows-security') {
+    var h = (window.location.hash || '').toLowerCase();
+    if (h.indexOf('windows') !== -1) {
       switchOS('windows');
-      const el = document.getElementById(window.location.hash.substring(1));
+      var targetId = h.substring(1);
+      var el = document.getElementById(targetId) || document.getElementById('windows-showcase');
       if (el) {
         setTimeout(function () {
           el.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+        }, 120);
       }
     } else {
       switchOS('macos');

@@ -286,28 +286,3 @@ def render_cards(lang="tr"):
     return "\n\n".join(html_cards)
 
 # Update file helper
-def update_showcase(file_path, lang="tr"):
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # Find the boundary: after the first article (PdfAle), up to <!-- Windows Güvenli Kurulum
-    # In both tr and en files:
-    # Pattern starts after PdfAle article closes: </article>\s*<!-- 2. DesktopDüzen
-    # Pattern ends before: </div>\s*<!-- Windows Güvenli Kurulum
-    pattern = r"(</article>\s*)(<!-- 2\..*?)(</div>\s*<!-- Windows Güvenli Kurulum|</div>\s*<!-- Windows Safe Installation)"
-    
-    new_cards_html = "\n\n" + render_cards(lang) + "\n        "
-    
-    match = re.search(pattern, content, re.DOTALL)
-    if not match:
-        print(f"Warning: Regex boundary not matched in {file_path}")
-        return False
-    
-    updated_content = content[:match.start(2)] + new_cards_html + content[match.end(2):]
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(updated_content)
-    print(f"Successfully updated {file_path}")
-    return True
-
-update_showcase("/Users/darwin/Documents/GitHub/macosuygulama/dist/tr/index.html", "tr")
-update_showcase("/Users/darwin/Documents/GitHub/macosuygulama/dist/index.html", "en")
