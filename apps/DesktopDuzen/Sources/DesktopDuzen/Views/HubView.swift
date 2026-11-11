@@ -20,11 +20,50 @@ public struct HubView: View {
                         actionCard("New File Zone", icon: "folder.badge.plus", tint: .blue) { ZoneActions.createFileZone() }
                         actionCard("Folder Zone", icon: "arrow.up.right.square", tint: .purple) { ZoneActions.createFolderZone() }
                         actionCard("New App Zone", icon: "square.grid.2x2.fill", tint: .teal) { ZoneActions.createAppZone() }
+                        actionCard("Pin Desktop Item", icon: "pin.fill", tint: .orange) { ZoneActions.pinDesktopItem() }
                         actionCard("Add Time", icon: "clock.fill", tint: .orange) { ZoneActions.addWidget(.clock) }
                         actionCard("Sticky Note", icon: "note.text", tint: .yellow) { ZoneActions.addWidget(.quickNote) }
                         actionCard("Auto-Align All", icon: "rectangle.3.group", tint: .green) { appState.autoAlignAllZones() }
                         actionCard("Run Auto-Sort", icon: "bolt.fill", tint: .indigo) { ZoneActions.runAutoSortInteractively() }
                         actionCard("Search Zones", icon: "magnifyingglass", tint: .pink) { WindowManager.shared.toggleGlobalSearch() }
+                    }
+
+                    Divider().padding(.vertical, 2)
+
+                    // Pinned Desktop Items Section
+                    HStack {
+                        Label("Pinned Desktop Items (\(appState.pinnedItems.count))", systemImage: "pin.fill")
+                            .font(.headline)
+                            .foregroundColor(.primary)
+                        Spacer()
+                        Button("Pin Desktop Item…") { ZoneActions.pinDesktopItem() }
+                            .controlSize(.small)
+                        if !appState.pinnedItems.isEmpty {
+                            Button("Restore Positions") { ZoneActions.restorePinnedPositions() }
+                                .controlSize(.small)
+                            Button("Unpin All") { DesktopPinService.shared.unpinAll() }
+                                .controlSize(.small)
+                        }
+                    }
+
+                    if appState.pinnedItems.isEmpty {
+                        HStack(spacing: 10) {
+                            Image(systemName: "pin.slash")
+                                .font(.system(size: 20))
+                                .foregroundColor(.secondary)
+                            Text("No items pinned. Use “Pin Desktop Item…” to lock icons, files, or folders to their exact desktop coordinates.")
+                                .font(.callout)
+                                .foregroundColor(.secondary)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(14)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color(nsColor: .controlBackgroundColor)))
+                    } else {
+                        VStack(spacing: 8) {
+                            ForEach(appState.pinnedItems) { item in
+                                pinnedItemRow(item)
+                            }
+                        }
                     }
 
                     Divider().padding(.vertical, 2)
@@ -190,6 +229,37 @@ public struct HubView: View {
             }
             .buttonStyle(.borderless)
             .help("Remove zone…")
+        }
+        .padding(10)
+        .background(RoundedRectangle(cornerRadius: 8).fill(Color(nsColor: .controlBackgroundColor)))
+    }
+
+    private func pinnedItemRow(_ item: PinnedDesktopItem) -> some View {
+        HStack(spacing: 12) {
+            Image(systemName: "pin.fill")
+                .font(.system(size: 16))
+                .foregroundColor(.orange)
+                .frame(width: 24)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(item.name)
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundColor(.primary)
+                Text("Locked at (\(Int(item.position.x)), \(Int(item.position.y))) • Excluded from auto-sort")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            Button("Show in Finder") {
+                let url = URL(fileURLWithPath: item.path)
+                if FileManager.default.fileExists(atPath: url.path) {
+                    NSWorkspace.shared.activateFileViewerSelecting([url])
+                }
+            }
+            .controlSize(.small)
+            Button("Unpin") {
+                DesktopPinService.shared.unpinItem(id: item.id)
+            }
+            .controlSize(.small)
         }
         .padding(10)
         .background(RoundedRectangle(cornerRadius: 8).fill(Color(nsColor: .controlBackgroundColor)))

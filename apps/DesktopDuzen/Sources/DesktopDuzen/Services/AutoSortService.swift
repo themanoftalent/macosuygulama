@@ -52,7 +52,7 @@ public final class AutoSortService {
         return candidates.first { $0.title.localizedCaseInsensitiveCompare(title) == .orderedSame }
     }
 
-    public func makePlan(rules: [AutoSortRule], zones: [ZoneModel], now: Date = Date()) -> AutoSortPlan {
+    public func makePlan(rules: [AutoSortRule], zones: [ZoneModel], now: Date = Date(), pinnedItemPaths: Set<String>? = nil) -> AutoSortPlan {
         var plan = AutoSortPlan()
         let desktop = fileService.desktopURL.standardizedFileURL
         let keys: [URLResourceKey] = [.isDirectoryKey, .isPackageKey, .contentModificationDateKey, .isAliasFileKey]
@@ -61,7 +61,20 @@ public final class AutoSortService {
         }
         var missing: [String] = []
 
+        let effectivePinned: Set<String>
+        if let explicit = pinnedItemPaths {
+            effectivePinned = explicit
+        } else {
+            effectivePinned = Set(AppState.shared.pinnedItems.map { URL(fileURLWithPath: $0.path).standardizedFileURL.path })
+        }
+
         for item in items {
+            let stdPath = item.standardizedFileURL.path
+            let resolvedPath = item.resolvingSymlinksInPath().standardizedFileURL.path
+            if effectivePinned.contains(stdPath) || effectivePinned.contains(resolvedPath) {
+                continue // Pinned desktop items are strictly protected and never moved by auto-sort.
+            }
+
             guard let values = try? item.resourceValues(forKeys: Set(keys)) else { continue }
             let isPackage = values.isPackage ?? false
             if (values.isDirectory ?? false) && !isPackage { continue }

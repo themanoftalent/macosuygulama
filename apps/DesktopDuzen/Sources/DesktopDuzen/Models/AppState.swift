@@ -10,6 +10,7 @@ public final class AppState: ObservableObject {
     @Published public var stickers: [DesktopSticker] = []
     @Published public var widgets: [DesktopWidget] = []
     @Published public var autoSortRules: [AutoSortRule] = []
+    @Published public var pinnedItems: [PinnedDesktopItem] = []
     @Published public var settings: AppSettings = AppSettings()
     @Published public var license: LicenseStatus = LicenseStatus()
 
@@ -53,6 +54,7 @@ public final class AppState: ObservableObject {
             $zones.dropFirst().map { _ in () }.eraseToAnyPublisher(),
             $stickers.dropFirst().map { _ in () }.eraseToAnyPublisher(),
             $widgets.dropFirst().map { _ in () }.eraseToAnyPublisher(),
+            $pinnedItems.dropFirst().map { _ in () }.eraseToAnyPublisher(),
             $settings.dropFirst().map { _ in () }.eraseToAnyPublisher(),
             $license.dropFirst().map { _ in () }.eraseToAnyPublisher(),
             $autoSortRules.dropFirst().map { _ in () }.eraseToAnyPublisher()
@@ -264,20 +266,23 @@ public final class AppState: ObservableObject {
         var stickers: [DesktopSticker]
         var widgets: [DesktopWidget]
         var autoSortRules: [AutoSortRule]
+        var pinnedItems: [PinnedDesktopItem] = []
         var settings: AppSettings
         var license: LicenseStatus
 
         init(zones: [ZoneModel], stickers: [DesktopSticker], widgets: [DesktopWidget],
-             autoSortRules: [AutoSortRule], settings: AppSettings, license: LicenseStatus) {
+             autoSortRules: [AutoSortRule], pinnedItems: [PinnedDesktopItem] = [],
+             settings: AppSettings, license: LicenseStatus) {
             self.zones = zones
             self.stickers = stickers
             self.widgets = widgets
             self.autoSortRules = autoSortRules
+            self.pinnedItems = pinnedItems
             self.settings = settings
             self.license = license
         }
 
-        enum CodingKeys: String, CodingKey { case version, zones, stickers, widgets, autoSortRules, settings, license }
+        enum CodingKeys: String, CodingKey { case version, zones, stickers, widgets, autoSortRules, pinnedItems, settings, license }
 
         init(from decoder: Decoder) throws {
             let c = try decoder.container(keyedBy: CodingKeys.self)
@@ -286,6 +291,7 @@ public final class AppState: ObservableObject {
             stickers = c.lossyArray(.stickers)
             widgets = c.lossyArray(.widgets)
             autoSortRules = c.lossyArray(.autoSortRules)
+            pinnedItems = c.lossyArray(.pinnedItems)
             settings = c.value(.settings, default: AppSettings(hasCompletedOnboarding: true))
             license = c.value(.license, default: LicenseStatus())
         }
@@ -293,7 +299,8 @@ public final class AppState: ObservableObject {
 
     private func snapshot() -> PersistedState {
         PersistedState(zones: zones, stickers: stickers, widgets: widgets,
-                       autoSortRules: autoSortRules, settings: settings, license: license)
+                       autoSortRules: autoSortRules, pinnedItems: pinnedItems,
+                       settings: settings, license: license)
     }
 
     @discardableResult
@@ -361,6 +368,7 @@ public final class AppState: ObservableObject {
         stickers = dedupe(state.stickers)
         widgets = AppState.removingDuplicateSingletons(dedupe(state.widgets))
         autoSortRules = state.autoSortRules.isEmpty ? AutoSortRule.defaultRules : dedupe(state.autoSortRules)
+        pinnedItems = dedupe(state.pinnedItems)
         settings = state.settings
         license = state.license
     }
@@ -453,5 +461,41 @@ public final class AppState: ObservableObject {
         apply(state)
         saveState()
         return true
+    }
+
+    // MARK: - Pinned Desktop Items
+
+    public func isItemPinned(path: String) -> Bool {
+        let stdPath = URL(fileURLWithPath: path).standardizedFileURL.path
+        return pinnedItems.contains {
+            URL(fileURLWithPath: $0.path).standardizedFileURL.path == stdPath
+        }
+    }
+
+    public func pinnedItem(for path: String) -> PinnedDesktopItem? {
+        let stdPath = URL(fileURLWithPath: path).standardizedFileURL.path
+        return pinnedItems.first {
+            URL(fileURLWithPath: $0.path).standardizedFileURL.path == stdPath
+        }
+    }
+
+    public func addPinnedItem(_ item: PinnedDesktopItem) {
+        pinnedItems.removeAll { $0.id == item.id || $0.path == item.path }
+        pinnedItems.append(item)
+    }
+
+    public func removePinnedItem(id: UUID) {
+        pinnedItems.removeAll { $0.id == id }
+    }
+
+    public func removePinnedItem(path: String) {
+        let stdPath = URL(fileURLWithPath: path).standardizedFileURL.path
+        pinnedItems.removeAll {
+            URL(fileURLWithPath: $0.path).standardizedFileURL.path == stdPath
+        }
+    }
+
+    public func removeAllPinnedItems() {
+        pinnedItems.removeAll()
     }
 }

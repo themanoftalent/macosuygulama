@@ -37,6 +37,8 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
             .sink { AppDelegate.applyDockIconPolicy($0) }
         MenuBarManager.shared.setupMenuBar()
         WindowManager.shared.start()
+        DesktopPinService.shared.start()
+        PinnedOverlayManager.shared.start()
 
         // Keep the stored preference consistent with what macOS actually has registered.
         let registered = LaunchAtLoginService.shared.isEnabled
@@ -76,6 +78,7 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
     public func applicationWillTerminate(_ notification: Notification) {
         // Flush immediately; the debounced autosave may not have fired yet.
         AppState.shared.saveState()
+        DesktopPinService.shared.stop()
         AutoSortService.shared.stopMonitoring()
         WindowManager.shared.tearDown()
         if let monitor = keyMonitor { NSEvent.removeMonitor(monitor) }

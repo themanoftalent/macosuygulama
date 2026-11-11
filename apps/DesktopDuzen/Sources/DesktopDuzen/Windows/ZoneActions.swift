@@ -210,4 +210,41 @@ public enum ZoneActions {
         state.stickers.append(DesktopSticker(content: emojis.randomElement() ?? "⭐️",
                                              frame: CGRect(x: screen.midX - 40, y: screen.midY - 40, width: 80, height: 80)))
     }
+
+    // MARK: - Desktop Item Pinning Actions
+
+    public static func pinDesktopItem() {
+        NSApp.activate(ignoringOtherApps: true)
+        let panel = NSOpenPanel()
+        panel.canChooseFiles = true
+        panel.canChooseDirectories = true
+        panel.allowsMultipleSelection = true
+        panel.prompt = "Pin Here"
+        panel.message = "Select desktop items to permanently lock at their current desktop positions:"
+        let desktop = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first
+            ?? URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Desktop")
+        panel.directoryURL = desktop
+
+        defer { DispatchQueue.main.async { WindowManager.shared.handFocusBackIfIdle() } }
+
+        if panel.runModal() == .OK {
+            var pinnedCount = 0
+            for url in panel.urls {
+                if DesktopPinService.shared.pinItem(at: url) != nil {
+                    pinnedCount += 1
+                }
+            }
+            if pinnedCount > 0 {
+                info("Desktop Items Pinned", "\(pinnedCount) item(s) permanently locked to their desktop position.")
+            }
+        }
+    }
+
+    public static func unpinDesktopItem(id: UUID) {
+        DesktopPinService.shared.unpinItem(id: id)
+    }
+
+    public static func restorePinnedPositions() {
+        DesktopPinService.shared.enforcePositions()
+    }
 }

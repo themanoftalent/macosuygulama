@@ -43,5 +43,20 @@ trap 'hdiutil detach "$MOUNT" -quiet || true' EXIT
 [ -d "$MOUNT/DesktopDüzen.app" ] && echo "  [OK] app bundle present"
 [ -L "$MOUNT/Applications" ] && echo "  [OK] Applications link present"
 codesign --verify --strict "$MOUNT/DesktopDüzen.app" && echo "  [OK] app signature valid inside DMG"
+hdiutil detach "$MOUNT" -quiet || true
+trap - EXIT
+
+# Notarize when a notarytool keychain profile is available. Create it once with:
+#   xcrun notarytool store-credentials DesktopDuzenNotary --apple-id <id> --team-id UFJWS3NY63
+PROFILE="${DD_NOTARY_PROFILE:-DesktopDuzenNotary}"
+if xcrun notarytool history --keychain-profile "$PROFILE" >/dev/null 2>&1; then
+    echo "==> Notarizing with profile $PROFILE (this can take a few minutes)"
+    xcrun notarytool submit "$DMG_PATH" --keychain-profile "$PROFILE" --wait
+    xcrun stapler staple "$DMG_PATH"
+    xcrun stapler validate "$DMG_PATH" && echo "  [OK] notarization ticket stapled"
+    spctl -a -t open --context context:primary-signature -vv "$DMG_PATH" 2>&1 | sed 's/^/  /'
+else
+    echo "==> Not notarized: keychain profile '$PROFILE' not found"
+fi
 echo "==> $DMG_PATH"
 ls -lh "$DMG_PATH"

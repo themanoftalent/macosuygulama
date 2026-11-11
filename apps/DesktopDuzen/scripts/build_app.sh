@@ -49,6 +49,7 @@ cat > "$CONTENTS_DIR/Info.plist" <<EOF
     <key>NSSupportsSuddenTermination</key><false/>
     <key>NSHumanReadableCopyright</key><string>© 2026 Mehmet Akif Çifçi</string>
     <key>NSDesktopFolderUsageDescription</key><string>DesktopDüzen shows and organises your Desktop files in zones and keeps zone folders in ~/Desktop/Zones.</string>
+    <key>NSAppleEventsUsageDescription</key><string>DesktopDüzen uses AppleScript to position and lock pinned items on your macOS desktop.</string>
     <key>NSDocumentsFolderUsageDescription</key><string>DesktopDüzen needs access to show Folder Zones that point inside Documents.</string>
     <key>NSDownloadsFolderUsageDescription</key><string>DesktopDüzen needs access to show Folder Zones that point inside Downloads.</string>
     <key>NSRemovableVolumesUsageDescription</key><string>DesktopDüzen needs access to show Folder Zones on external drives.</string>

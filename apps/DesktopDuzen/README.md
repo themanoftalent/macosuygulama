@@ -2,7 +2,7 @@
 
 A native macOS desktop organizer. DesktopDüzen places glass "zones" on your desktop that hold files, mirror folders, or launch apps, so the Desktop stays tidy without hiding anything from Finder.
 
-Version 1.1.0 · macOS 13 or later · Apple silicon · Swift, AppKit, SwiftUI · MIT
+Version 1.2.0 · macOS 13 or later · Apple silicon · Swift, AppKit, SwiftUI · MIT
 
 ![DesktopDüzen icon](Resources/AppIcon-1024.png)
 
@@ -32,6 +32,15 @@ Auto-sort
 - Rules route loose Desktop files into zones by extension. Each rule has an editable extension list and target zone.
 - "Run Sort Now" previews what will move and offers to create missing zones. Optional continuous sorting waits until a file has finished saving.
 
+Permanent Desktop Item Pinning ("Lock Pinned Positions")
+- Permanently lock loose desktop items (files, folders, or icons) to their exact desktop coordinates.
+- Pin via Menu Bar ("Pinned Desktop Items" > "Pin Desktop Item Here…"), DesktopDüzen Hub, or context menus.
+- Position-locking & snapback: DesktopDüzen monitors the desktop and detects deviations caused by dragging, Finder rearrangement ("Clean Up By" / "Sort By"), or refreshes, restoring icons back to their pinned coordinates.
+- Visual Indicator: An unobtrusive badge (📌) appears at the top-right corner of each pinned desktop item. Clicking the badge reveals quick options to unpin or show in Finder without interfering with Finder desktop clicks.
+- Excluded from Organization: Auto-sort rules and desktop cleanup routines strictly exclude pinned items, organizing other items around them.
+- Persistent: Coordinates, file paths, and display configurations are saved to `state.json` and survive app restarts, Finder restarts, logouts, and system reboots.
+- Multi-Display Resilient: Coordinates are tracked per display, gracefully handling resolution changes and monitor reconnections.
+
 Appearance
 - 27 themes across Liquid Glass, Classic, Gradient, Solid and Accessibility, plus a custom colour and transparency per zone.
 - Clear mode: set the background down to 0 % and turn off the border and shadow so only icons and labels float on the wallpaper. Label colour follows the wallpaper behind the zone: black text on light wallpaper, white text on dark wallpaper.
@@ -55,11 +64,20 @@ Desktop behaviour
 ## Build
 
 ```bash
-swift test                      # 67 tests; they use temporary folders only and never touch your Desktop
+swift test                      # 72 tests; they use temporary folders only and never touch your Desktop
 ./scripts/build_app.sh          # builds and signs DesktopDuzen.app (Developer ID if available, else ad-hoc)
 ./scripts/create_dmg.sh         # packages and verifies DesktopDuzen-<version>.dmg
 swift scripts/make_icon.swift Resources && iconutil -c icns Resources/AppIcon.iconset -o Resources/AppIcon.icns
 ```
+
+## Changes in 1.2.0
+
+- Added permanent desktop item position-locking ("Lock Desktop Items in Their Pinned Positions").
+- Added desktop coordinate persistence across app restarts, Finder restarts, logouts, and reboots.
+- Automatic organization and AutoSort rules strictly exclude pinned items.
+- Added visual pin indicator overlay (📌) with non-interfering click-through and contextual unpin options.
+- Added Menu Bar and Hub interfaces for managing pinned items, restoring positions, and unpinning.
+- Multi-monitor resilience: Preserves and restores coordinates per display.
 
 ## Changes in 1.1.0
 

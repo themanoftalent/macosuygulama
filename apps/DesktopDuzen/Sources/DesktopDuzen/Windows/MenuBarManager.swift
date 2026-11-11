@@ -135,6 +135,55 @@ public class MenuBarManager: NSObject, NSMenuDelegate {
         menu.addItem(hideDesktopItem)
         
         menu.addItem(NSMenuItem.separator())
+
+        // Pinned Desktop Items
+        let pinMenu = NSMenu()
+        let pinNowItem = NSMenuItem(title: "Pin Desktop Item Here…", action: #selector(pinDesktopItemAction), keyEquivalent: "p")
+        pinNowItem.target = self
+        pinNowItem.image = NSImage(systemSymbolName: "pin.fill", accessibilityDescription: nil)
+        pinMenu.addItem(pinNowItem)
+
+        let restorePosItem = NSMenuItem(title: "Restore Pinned Positions", action: #selector(restorePositionsAction), keyEquivalent: "")
+        restorePosItem.target = self
+        restorePosItem.image = NSImage(systemSymbolName: "arrow.clockwise", accessibilityDescription: nil)
+        pinMenu.addItem(restorePosItem)
+
+        pinMenu.addItem(NSMenuItem.separator())
+
+        let pinnedItems = AppState.shared.pinnedItems
+        if pinnedItems.isEmpty {
+            let emptyItem = NSMenuItem(title: "(No items currently pinned)", action: nil, keyEquivalent: "")
+            emptyItem.isEnabled = false
+            pinMenu.addItem(emptyItem)
+        } else {
+            for item in pinnedItems {
+                let itemMenu = NSMenu()
+                let showFinder = NSMenuItem(title: "Show in Finder", action: #selector(revealPinnedInFinder(_:)), keyEquivalent: "")
+                showFinder.representedObject = item.path
+                showFinder.target = self
+                itemMenu.addItem(showFinder)
+
+                let unpinThis = NSMenuItem(title: "Unpin", action: #selector(unpinItemAction(_:)), keyEquivalent: "")
+                unpinThis.representedObject = item.id
+                unpinThis.target = self
+                itemMenu.addItem(unpinThis)
+
+                let entry = NSMenuItem(title: "📌 \(item.name) (\(Int(item.position.x)), \(Int(item.position.y)))", action: nil, keyEquivalent: "")
+                entry.submenu = itemMenu
+                pinMenu.addItem(entry)
+            }
+            pinMenu.addItem(NSMenuItem.separator())
+            let unpinAll = NSMenuItem(title: "Unpin All Items", action: #selector(unpinAllAction), keyEquivalent: "")
+            unpinAll.target = self
+            pinMenu.addItem(unpinAll)
+        }
+
+        let pinParent = NSMenuItem(title: "Pinned Desktop Items (\(pinnedItems.count))", action: nil, keyEquivalent: "")
+        pinParent.submenu = pinMenu
+        pinParent.image = NSImage(systemSymbolName: "pin.fill", accessibilityDescription: nil)
+        menu.addItem(pinParent)
+        
+        menu.addItem(NSMenuItem.separator())
         
         // Smart Auto Sort
         let autoSortMenu = NSMenu()
@@ -249,6 +298,25 @@ public class MenuBarManager: NSObject, NSMenuDelegate {
     }
     
     @objc private func openAbout() { WindowManager.shared.showAbout() }
+    
+    @objc private func pinDesktopItemAction() { ZoneActions.pinDesktopItem() }
+    
+    @objc private func restorePositionsAction() { ZoneActions.restorePinnedPositions() }
+    
+    @objc private func unpinAllAction() { DesktopPinService.shared.unpinAll() }
+    
+    @objc private func unpinItemAction(_ sender: NSMenuItem) {
+        guard let id = sender.representedObject as? UUID else { return }
+        DesktopPinService.shared.unpinItem(id: id)
+    }
+    
+    @objc private func revealPinnedInFinder(_ sender: NSMenuItem) {
+        guard let path = sender.representedObject as? String else { return }
+        let url = URL(fileURLWithPath: path)
+        if FileManager.default.fileExists(atPath: url.path) {
+            NSWorkspace.shared.activateFileViewerSelecting([url])
+        }
+    }
     
     @objc private func quitApp() {
         NSApp.terminate(nil)
