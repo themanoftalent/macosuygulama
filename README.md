@@ -8,7 +8,7 @@ Native, local-first, open-source apps for macOS.
 
 ![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000?logo=vercel)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple)
-![Apps](https://img.shields.io/badge/apps-9-blue)
+![Apps](https://img.shields.io/badge/apps-12-blue)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
 
 </div>
@@ -23,6 +23,7 @@ This repository holds the website only. Each app lives in its own repository, li
 |---|---|---|---|---|
 | [PdfAle](https://github.com/themanoftalent/pdfale) | PDF editing, annotation, page organizing, form filling and signing | Rust, egui | [![release](https://img.shields.io/github/v/release/themanoftalent/pdfale?label=)](https://github.com/themanoftalent/pdfale/releases/latest) | MIT OR Apache-2.0 |
 | [Temizale](https://github.com/themanoftalent/Temizale) | Cache and Trash cleaning, orphaned file scrubbing, app uninstalling | Swift 6, SwiftUI | [![release](https://img.shields.io/github/v/release/themanoftalent/Temizale?label=)](https://github.com/themanoftalent/Temizale/releases/latest) | see repo |
+| [Bootayar](https://github.com/themanoftalent/Bootayar) | macOS Startup & Automation Manager — manage startup apps, background services, and scheduled tasks | Swift, SwiftUI | [![release](https://img.shields.io/github/v/release/themanoftalent/Bootayar?label=)](https://github.com/themanoftalent/Bootayar/releases/latest) | MIT |
 | [Miknatizale](https://github.com/themanoftalent/Miknatizale) | Window snapping to halves, thirds and quadrants | Swift 6, AppKit | [![release](https://img.shields.io/github/v/release/themanoftalent/Miknatizale?label=)](https://github.com/themanoftalent/Miknatizale/releases/latest) | see repo |
 | [RecordAle](https://github.com/themanoftalent/RecordAle) | Screen recording for walkthroughs with auto zoom and cursor smoothing | TypeScript, Motion Canvas | [![release](https://img.shields.io/github/v/release/themanoftalent/RecordAle?label=)](https://github.com/themanoftalent/RecordAle/releases/latest) | see repo |
 | [Foldale](https://github.com/themanoftalent/foldale) | Dual-pane, keyboard-driven file manager | TypeScript, Rust | [![release](https://img.shields.io/github/v/release/themanoftalent/foldale?label=)](https://github.com/themanoftalent/foldale/releases/latest) | see repo |
