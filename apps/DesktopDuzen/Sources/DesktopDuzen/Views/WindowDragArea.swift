@@ -5,13 +5,15 @@ import AppKit
 /// Earlier builds moved windows from SwiftUI DragGesture translations measured inside the very
 /// view being moved, and never reset the start frame, so zones jumped between drags.
 public struct WindowDragArea: NSViewRepresentable {
+    public var isLocked: Bool = false
     public var snap: ((NSRect, Bool) -> NSRect)?
     public var onDragEnded: (NSRect) -> Void
     public var onDoubleClick: (() -> Void)?
     public var onClick: (() -> Void)?
 
-    public init(snap: ((NSRect, Bool) -> NSRect)? = nil, onDragEnded: @escaping (NSRect) -> Void,
+    public init(isLocked: Bool = false, snap: ((NSRect, Bool) -> NSRect)? = nil, onDragEnded: @escaping (NSRect) -> Void,
                 onDoubleClick: (() -> Void)? = nil, onClick: (() -> Void)? = nil) {
+        self.isLocked = isLocked
         self.snap = snap
         self.onDragEnded = onDragEnded
         self.onDoubleClick = onDoubleClick
@@ -29,6 +31,7 @@ public struct WindowDragArea: NSViewRepresentable {
     }
 
     private func update(_ view: DragHandleView) {
+        view.isLocked = isLocked
         view.snap = snap
         view.onDragEnded = onDragEnded
         view.onDoubleClick = onDoubleClick
@@ -36,6 +39,7 @@ public struct WindowDragArea: NSViewRepresentable {
     }
 
     public final class DragHandleView: NSView {
+        var isLocked: Bool = false
         var snap: ((NSRect, Bool) -> NSRect)?
         var onDragEnded: ((NSRect) -> Void)?
         var onDoubleClick: (() -> Void)?
@@ -48,6 +52,10 @@ public struct WindowDragArea: NSViewRepresentable {
             guard let window = window else { return }
             if event.clickCount >= 2 {
                 onDoubleClick?()
+                return
+            }
+            if isLocked {
+                onClick?()
                 return
             }
             // No makeKey(): dragging must not steal keyboard focus from the frontmost app.

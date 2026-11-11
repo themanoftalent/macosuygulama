@@ -57,9 +57,9 @@ public struct ZoneHeaderView: View {
                 Spacer(minLength: 4)
 
                 HStack(spacing: 4) {
-                    headerButton(zone.isPinnedOnTop ? "pin.fill" : "pin",
-                                 help: zone.isPinnedOnTop ? "Unpin (return to desktop level)" : "Keep above other windows",
-                                 highlighted: zone.isPinnedOnTop, action: togglePinOnTop)
+                    headerButton(zone.isPositionLocked ? "pin.fill" : "pin",
+                                 help: zone.isPositionLocked ? "Unpin position (allow moving)" : "Pin position on desktop (lock in place)",
+                                 highlighted: zone.isPositionLocked, action: togglePositionLock)
 
                     headerButton(zone.isCollapsed ? "chevron.down" : "chevron.up",
                                  help: zone.isCollapsed ? "Expand zone" : "Collapse to title bar", action: toggleCollapse)
@@ -86,6 +86,7 @@ public struct ZoneHeaderView: View {
             .help(zone.title)
             .background(
                 WindowDragArea(
+                    isLocked: zone.isPositionLocked,
                     snap: WindowManager.shared.snapFunction(for: zone.id),
                     onDragEnded: { frame in appState.updateZoneFrame(id: zone.id, frame: frame) },
                     onDoubleClick: beginRename
@@ -234,6 +235,10 @@ public struct ZoneHeaderView: View {
         isEditingTitle = false
         controller.panel.makeFirstResponder(nil)
         WindowManager.shared.dropDesktopKeyFocus()
+    }
+
+    private func togglePositionLock() {
+        appState.mutateZone(id: zone.id) { $0.isPositionLocked.toggle() }
     }
 
     private func togglePinOnTop() {

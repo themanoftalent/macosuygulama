@@ -200,6 +200,7 @@ public final class AppState: ObservableObject {
     }
 
     /// Arranges zones in rows, top-left first, separately on each display, on the grid.
+    /// Pinned/locked zones preserve their exact position and are not rearranged.
     public func autoAlignAllZones() {
         let screens = screenFramesProvider()
         guard !screens.isEmpty else { return }
@@ -207,7 +208,9 @@ public final class AppState: ObservableObject {
         let spacing = gridStep
         var updated = zones
         for (s, screen) in screens.enumerated() {
-            let members = updated.indices.filter { screenIndex(for: updated[$0].frame, in: screens) == s }
+            let members = updated.indices.filter {
+                screenIndex(for: updated[$0].frame, in: screens) == s && !updated[$0].isPositionLocked
+            }
                 .sorted { a, b in
                     // Keep the user's rough reading order: top rows first, then left to right.
                     let fa = updated[a].frame, fb = updated[b].frame
@@ -236,11 +239,13 @@ public final class AppState: ObservableObject {
     }
 
     /// Snaps every zone's position and size to the desktop grid without rearranging the layout.
+    /// Pinned/locked zones preserve their exact coordinates.
     public func alignAllZonesToGrid() {
         let screens = screenFramesProvider()
         guard !screens.isEmpty else { return }
         var updated = zones
         for i in updated.indices {
+            if updated[i].isPositionLocked { continue }
             let screen = screens[screenIndex(for: updated[i].frame, in: screens)]
             var f = updated[i].frame
             let width = max(220, (f.width / gridStep).rounded() * gridStep)

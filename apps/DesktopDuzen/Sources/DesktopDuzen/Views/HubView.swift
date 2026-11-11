@@ -206,7 +206,7 @@ public struct HubView: View {
                 Text(zone.title)
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundColor(.primary)
-                Text("\(zone.type.rawValue) • \(zone.viewMode.rawValue) view • \(zone.isPinnedOnTop ? "Pinned on top" : "Desktop level")")
+                Text("\(zone.type.rawValue) • \(zone.viewMode.rawValue) view • \(zone.isPositionLocked ? "📌 Position locked" : "Desktop level")")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
@@ -218,6 +218,11 @@ public struct HubView: View {
                 }
                 .controlSize(.small)
             }
+            Button(zone.isPositionLocked ? "Unlock" : "Pin") {
+                appState.mutateZone(id: zone.id) { $0.isPositionLocked.toggle() }
+            }
+            .controlSize(.small)
+            .help(zone.isPositionLocked ? "Unlock position" : "Lock position on desktop")
             Button("Style…") { WindowManager.shared.showStyleWindow(for: zone.id) }
                 .controlSize(.small)
                 .help("Theme, colour, transparency, text and icon size")

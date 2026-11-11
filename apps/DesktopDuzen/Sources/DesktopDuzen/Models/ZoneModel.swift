@@ -13,6 +13,7 @@ public struct ZoneModel: Identifiable, Codable, Equatable {
     public var expandedHeight: CGFloat
     public var autoExpandOnHover: Bool
     public var isPinnedOnTop: Bool
+    public var isPositionLocked: Bool
     public var viewMode: ZoneViewMode
     public var sortMode: ZoneSortMode
     public var tabs: [ZoneTab]
@@ -46,6 +47,7 @@ public struct ZoneModel: Identifiable, Codable, Equatable {
         expandedHeight: CGFloat = 260.0,
         autoExpandOnHover: Bool = false,
         isPinnedOnTop: Bool = false,
+        isPositionLocked: Bool = false,
         viewMode: ZoneViewMode = .icon,
         sortMode: ZoneSortMode = .manual,
         tabs: [ZoneTab] = [],
@@ -74,6 +76,7 @@ public struct ZoneModel: Identifiable, Codable, Equatable {
         self.expandedHeight = expandedHeight
         self.autoExpandOnHover = autoExpandOnHover
         self.isPinnedOnTop = isPinnedOnTop
+        self.isPositionLocked = isPositionLocked
         self.viewMode = viewMode
         self.sortMode = sortMode
         self.tabs = tabs
@@ -95,7 +98,7 @@ public struct ZoneModel: Identifiable, Codable, Equatable {
 
     enum CodingKeys: String, CodingKey {
         case id, type, title, frame, displayID, isCollapsed, collapsedHeight, expandedHeight
-        case autoExpandOnHover, isPinnedOnTop, viewMode, sortMode, tabs, activeTabID, apps
+        case autoExpandOnHover, isPinnedOnTop, isPositionLocked, viewMode, sortMode, tabs, activeTabID, apps
         case backingFolderPath, securityBookmarkData, themeID, customBackgroundHex
         case customBackgroundOpacity, showBorder, showShadow, iconSize, fontSize, iconSpacing, manualOrder, createdAt
     }
@@ -113,6 +116,7 @@ public struct ZoneModel: Identifiable, Codable, Equatable {
         self.expandedHeight = c.value(.expandedHeight, default: 260.0)
         self.autoExpandOnHover = c.value(.autoExpandOnHover, default: false)
         self.isPinnedOnTop = c.value(.isPinnedOnTop, default: false)
+        self.isPositionLocked = c.value(.isPositionLocked, default: false)
         self.viewMode = c.value(.viewMode, default: .icon)
         self.sortMode = c.value(.sortMode, default: .manual)
         self.tabs = c.lossyArray(.tabs)

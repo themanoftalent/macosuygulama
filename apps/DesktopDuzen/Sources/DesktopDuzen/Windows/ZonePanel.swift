@@ -82,7 +82,8 @@ public class DesktopPanel: NSPanel, NSWindowDelegate {
     }
 
     public func applyLevel(pinned: Bool) {
-        let target: NSWindow.Level = pinned ? .floating : DesktopPanel.desktopLevel
+        // Zones always sit directly at the desktop level so they never cover other apps or browsers.
+        let target: NSWindow.Level = DesktopPanel.desktopLevel
         if level != target { level = target }
     }
 
@@ -99,7 +100,10 @@ public class DesktopPanel: NSPanel, NSWindowDelegate {
     }
 
     public func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
-        NSSize(width: max(frameSize.width, minimumContentSize.width), height: max(frameSize.height, minimumContentSize.height))
+        if let zp = sender as? ZonePanel, let zone = AppState.shared.zone(id: zp.zoneID), zone.isPositionLocked {
+            return sender.frame.size
+        }
+        return NSSize(width: max(frameSize.width, minimumContentSize.width), height: max(frameSize.height, minimumContentSize.height))
     }
 
     public override func cancelOperation(_ sender: Any?) {

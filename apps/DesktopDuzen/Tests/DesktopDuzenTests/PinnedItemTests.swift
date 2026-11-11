@@ -120,4 +120,21 @@ final class PinnedItemTests: SandboxedTestCase {
         XCTAssertEqual(appKitPt.x, 2400)
         XCTAssertEqual(appKitPt.y, primaryH - 150)
     }
+
+    func testAutoAlignPreservesPositionOfLockedZones() {
+        let state = makeState(createStarter: false)
+        let customFrame = CGRect(x: 777, y: 333, width: 340, height: 260)
+        var lockedZone = ZoneModel(type: .file, title: "LockedZone", frame: customFrame)
+        lockedZone.isPositionLocked = true
+        state.zones.append(lockedZone)
+
+        let unlockedZone = ZoneModel(type: .file, title: "UnlockedZone", frame: CGRect(x: 100, y: 100, width: 340, height: 260))
+        state.zones.append(unlockedZone)
+
+        state.autoAlignAllZones()
+
+        let afterLocked = state.zones.first { $0.title == "LockedZone" }
+        XCTAssertEqual(afterLocked?.frame.origin.x, 777, "Locked zone X position should remain untouched")
+        XCTAssertEqual(afterLocked?.frame.origin.y, 333, "Locked zone Y position should remain untouched")
+    }
 }
