@@ -97,5 +97,6 @@ Bugs and feature requests for a specific app go to that app's repository. Read [
 ## Author
 
 Mehmet Akif Çifçi · [GitHub](https://github.com/themanoftalent) · [ORCID](https://orcid.org/0000-0002-6439-8826)
+* Contributor: Dmytro Lysai
 
 If an app saves you time, star its repository. That helps other Mac users find it.
