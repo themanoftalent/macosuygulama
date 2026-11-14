@@ -21,6 +21,7 @@ This repository holds the website only. Each app lives in its own repository, li
 
 | App | What it does | Stack | Latest | License |
 |---|---|---|---|---|
+| [Searchale](https://github.com/themanoftalent/Searchale) | Local fuzzy filename and text/PDF search from the menu bar | Swift, SwiftUI, SQLite | [DMG v1.4.0](https://github.com/themanoftalent/Searchale/releases/tag/v1.4.0) | see repo |
 | [PdfAle](https://github.com/themanoftalent/pdfale) | PDF editing, annotation, page organizing, form filling and signing | Rust, egui | [![release](https://img.shields.io/github/v/release/themanoftalent/pdfale?label=)](https://github.com/themanoftalent/pdfale/releases/latest) | MIT OR Apache-2.0 |
 | [Temizale](https://github.com/themanoftalent/Temizale) | Cache and Trash cleaning, orphaned file scrubbing, app uninstalling | Swift 6, SwiftUI | [![release](https://img.shields.io/github/v/release/themanoftalent/Temizale?label=)](https://github.com/themanoftalent/Temizale/releases/latest) | see repo |
 | [Bootayar](https://github.com/themanoftalent/Bootayar) | macOS Startup & Automation Manager — manage startup apps, background services, and scheduled tasks | Swift, SwiftUI | [![release](https://img.shields.io/github/v/release/themanoftalent/Bootayar?label=)](https://github.com/themanoftalent/Bootayar/releases/latest) | MIT |
