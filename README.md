@@ -9,7 +9,7 @@
 [![Deployed on Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000?logo=vercel)](https://macosuygulama.vercel.app)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple)](https://macosuygulama.vercel.app)
 [![Built with](https://img.shields.io/badge/built%20with-Swift%20|%20SwiftUI%20|%20AppKit-FA7343?logo=swift&logoColor=white)](https://macosuygulama.vercel.app)
-[![Apps](https://img.shields.io/badge/apps-13-blue)](https://macosuygulama.vercel.app)
+[![Apps](https://img.shields.io/badge/apps-14-blue)](https://macosuygulama.vercel.app)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
 </div>
@@ -77,6 +77,7 @@ This repository holds the website only. Each app lives in its own repository, li
 | [AleBar](https://github.com/themanoftalent/AleBar) | Menu bar organizer, styling and command palette | Swift 6 | [![release](https://img.shields.io/github/v/release/themanoftalent/AleBar?label=)](https://github.com/themanoftalent/AleBar/releases/latest) | MIT |
 | [AleDesk](https://github.com/themanoftalent/AleDesk) | Remote desktop control and file transfer for macOS and Windows | Rust, Flutter | source only | AGPL-3.0 |
 | [DesktopDüzen](apps/DesktopDuzen) | Desktop zone organizer (Stardock Fences style) with live sync, auto-sort & widgets | Swift 6, AppKit, SwiftUI | [DMG (v1.1.0)](apps/DesktopDuzen/DesktopDuzen.dmg) | MIT |
+| [TopShelf](apps/TopShelf) | Pin folders to the macOS menu bar for one-click browsing, drag-and-drop, Quick Look hover previews & custom icons | Swift 6, AppKit, SwiftUI | [DMG (v1.0.0)](apps/TopShelf/TopShelf.dmg) | MIT |
 
 Clipale also has companion clients for [iOS](https://github.com/themanoftalent/clipale-ios), [Windows](https://github.com/themanoftalent/clipale-windows) and [Android](https://github.com/themanoftalent/clipale-android).
 
